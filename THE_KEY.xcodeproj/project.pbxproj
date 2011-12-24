@@ -383,6 +383,14 @@
 		F0D706FA14A5665600EC7633 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706F614A5665600EC7633 /* button.png */; };
 		F0D706FB14A5665600EC7633 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706F714A5665600EC7633 /* button1.png */; };
 		F0D7070014A566BF00EC7633 /* GameManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706FF14A566BF00EC7633 /* GameManager.mm */; };
+		F0D7070A14A568DB00EC7633 /* IID_Control_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */; };
+		F0D7070B14A568DB00EC7633 /* IID_Game_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */; };
+		F0D7070C14A568DB00EC7633 /* IID_Gameplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */; };
+		F0D7071714A5693900EC7633 /* AFC.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071014A5693800EC7633 /* AFC.mm */; };
+		F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071214A5693800EC7633 /* IID_Game_Character.mm */; };
+		F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071414A5693800EC7633 /* IID_Game_Object.mm */; };
+		F0D7071A14A5693900EC7633 /* IID_Generic_Soldier.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071614A5693800EC7633 /* IID_Generic_Soldier.mm */; };
+		F0D7071D14A569B200EC7633 /* IID_TileMap.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071C14A569B200EC7633 /* IID_TileMap.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1210,6 +1218,22 @@
 		F0D706FF14A566BF00EC7633 /* GameManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameManager.mm; sourceTree = "<group>"; };
 		F0D7070214A566E700EC7633 /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
 		F0D7070314A566E700EC7633 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Control_Layer.h; sourceTree = "<group>"; };
+		F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Control_Layer.mm; sourceTree = "<group>"; };
+		F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Game_Scene.h; sourceTree = "<group>"; };
+		F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Game_Scene.mm; sourceTree = "<group>"; };
+		F0D7070814A568DB00EC7633 /* IID_Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Gameplay.h; sourceTree = "<group>"; };
+		F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Gameplay.mm; sourceTree = "<group>"; };
+		F0D7070F14A5693800EC7633 /* AFC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFC.h; sourceTree = "<group>"; };
+		F0D7071014A5693800EC7633 /* AFC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AFC.mm; sourceTree = "<group>"; };
+		F0D7071114A5693800EC7633 /* IID_Game_Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Game_Character.h; sourceTree = "<group>"; };
+		F0D7071214A5693800EC7633 /* IID_Game_Character.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Game_Character.mm; sourceTree = "<group>"; };
+		F0D7071314A5693800EC7633 /* IID_Game_Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Game_Object.h; sourceTree = "<group>"; };
+		F0D7071414A5693800EC7633 /* IID_Game_Object.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Game_Object.mm; sourceTree = "<group>"; };
+		F0D7071514A5693800EC7633 /* IID_Generic_Soldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Generic_Soldier.h; sourceTree = "<group>"; };
+		F0D7071614A5693800EC7633 /* IID_Generic_Soldier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Generic_Soldier.mm; sourceTree = "<group>"; };
+		F0D7071B14A569B100EC7633 /* IID_TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_TileMap.h; sourceTree = "<group>"; };
+		F0D7071C14A569B200EC7633 /* IID_TileMap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_TileMap.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1268,6 +1292,7 @@
 		F01D638F14A55D7600FE8B9A /* THE_KEY */ = {
 			isa = PBXGroup;
 			children = (
+				F0D7070D14A568FC00EC7633 /* Objects */,
 				F0D7070114A566C900EC7633 /* Constants and Protocols */,
 				F0D706FD14A566A300EC7633 /* Singleton Managers */,
 				F0D706FC14A5667600EC7633 /* App Delegate and base source */,
@@ -2472,6 +2497,14 @@
 		F0D706CD14A5653E00EC7633 /* 2D Levels */ = {
 			isa = PBXGroup;
 			children = (
+				F0D7071B14A569B100EC7633 /* IID_TileMap.h */,
+				F0D7071C14A569B200EC7633 /* IID_TileMap.mm */,
+				F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */,
+				F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */,
+				F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */,
+				F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */,
+				F0D7070814A568DB00EC7633 /* IID_Gameplay.h */,
+				F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */,
 			);
 			name = "2D Levels";
 			sourceTree = "<group>";
@@ -2582,6 +2615,29 @@
 				F0D7070314A566E700EC7633 /* Constants.h */,
 			);
 			name = "Constants and Protocols";
+			sourceTree = "<group>";
+		};
+		F0D7070D14A568FC00EC7633 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F0D7070E14A5690600EC7633 /* 2d */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		F0D7070E14A5690600EC7633 /* 2d */ = {
+			isa = PBXGroup;
+			children = (
+				F0D7070F14A5693800EC7633 /* AFC.h */,
+				F0D7071014A5693800EC7633 /* AFC.mm */,
+				F0D7071114A5693800EC7633 /* IID_Game_Character.h */,
+				F0D7071214A5693800EC7633 /* IID_Game_Character.mm */,
+				F0D7071314A5693800EC7633 /* IID_Game_Object.h */,
+				F0D7071414A5693800EC7633 /* IID_Game_Object.mm */,
+				F0D7071514A5693800EC7633 /* IID_Generic_Soldier.h */,
+				F0D7071614A5693800EC7633 /* IID_Generic_Soldier.mm */,
+			);
+			name = 2d;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3013,6 +3069,14 @@
 				F0D706EA14A5659500EC7633 /* SneakyJoystick.m in Sources */,
 				F0D706EB14A5659500EC7633 /* SneakyJoystickSkinnedBase.m in Sources */,
 				F0D7070014A566BF00EC7633 /* GameManager.mm in Sources */,
+				F0D7070A14A568DB00EC7633 /* IID_Control_Layer.mm in Sources */,
+				F0D7070B14A568DB00EC7633 /* IID_Game_Scene.mm in Sources */,
+				F0D7070C14A568DB00EC7633 /* IID_Gameplay.mm in Sources */,
+				F0D7071714A5693900EC7633 /* AFC.mm in Sources */,
+				F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */,
+				F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */,
+				F0D7071A14A5693900EC7633 /* IID_Generic_Soldier.mm in Sources */,
+				F0D7071D14A569B200EC7633 /* IID_TileMap.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
