@@ -364,7 +364,7 @@
 		F01D6AA114A55FDD00FE8B9A /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5214A55FDD00FE8B9A /* CC3Foundation.m */; };
 		F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5414A55FDD00FE8B9A /* CC3GLMatrix.m */; };
 		F02646DB14A58B2D00C96B85 /* AFC.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02646DA14A58B2D00C96B85 /* AFC.plist */; };
-		F0D706C114A562F000EC7633 /* Gameplay_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C014A562F000EC7633 /* Gameplay_Layer.mm */; };
+		F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */; };
 		F0D706C414A5631100EC7633 /* Test_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.mm */; };
 		F0D706C814A563DE00EC7633 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C614A563DE00EC7633 /* tileset.png */; };
 		F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C914A564C700EC7633 /* test_level.tmx */; };
@@ -1186,8 +1186,8 @@
 		F01D6A5614A55FDD00FE8B9A /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
 		F01D6A5714A55FDD00FE8B9A /* CC3MatrixMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3MatrixMath.h; sourceTree = "<group>"; };
 		F02646DA14A58B2D00C96B85 /* AFC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AFC.plist; sourceTree = "<group>"; };
+		F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Gameplay_Layer.mm; path = THE_KEY/Gameplay_Layer.mm; sourceTree = "<group>"; };
 		F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay_Layer.h; path = THE_KEY/Gameplay_Layer.h; sourceTree = "<group>"; };
-		F0D706C014A562F000EC7633 /* Gameplay_Layer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Gameplay_Layer.mm; path = THE_KEY/Gameplay_Layer.mm; sourceTree = "<group>"; };
 		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Scene.h; path = THE_KEY/Test_Scene.h; sourceTree = "<group>"; };
 		F0D706C314A5631100EC7633 /* Test_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Test_Scene.mm; path = THE_KEY/Test_Scene.mm; sourceTree = "<group>"; };
 		F0D706C614A563DE00EC7633 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset.png; sourceTree = "<group>"; };
@@ -2577,7 +2577,7 @@
 				F0D706C314A5631100EC7633 /* Test_Scene.mm */,
 				F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */,
 				F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */,
-				F0D706C014A562F000EC7633 /* Gameplay_Layer.mm */,
+				F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */,
 				F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */,
 			);
 			name = Tests;
@@ -3059,7 +3059,6 @@
 				F01D6AA014A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m in Sources */,
 				F01D6AA114A55FDD00FE8B9A /* CC3Foundation.m in Sources */,
 				F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */,
-				F0D706C114A562F000EC7633 /* Gameplay_Layer.mm in Sources */,
 				F0D706C414A5631100EC7633 /* Test_Scene.mm in Sources */,
 				F0D706E314A5659500EC7633 /* Main_Menu.mm in Sources */,
 				F0D706E414A5659500EC7633 /* MainMenuScene.mm in Sources */,
@@ -3077,6 +3076,7 @@
 				F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */,
 				F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */,
 				F0D7071A14A5693900EC7633 /* IID_Generic_Soldier.mm in Sources */,
+				F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

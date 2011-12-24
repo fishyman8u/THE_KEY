@@ -8,7 +8,7 @@
 
 #import "cocos2d.h"
 #import "IID_Control_Layer.h"
-#import "Gameplay.h"
+//#import "Gameplay.h"
 //#import "IID_TileMap.h"
 #import "Constants.h"
 @interface IID_Game_Scene : CCScene
