@@ -390,7 +390,8 @@
 		F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071214A5693800EC7633 /* IID_Game_Character.mm */; };
 		F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071414A5693800EC7633 /* IID_Game_Object.mm */; };
 		F0D7071A14A5693900EC7633 /* IID_Generic_Soldier.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071614A5693800EC7633 /* IID_Generic_Soldier.mm */; };
-		F0D7071D14A569B200EC7633 /* IID_TileMap.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071C14A569B200EC7633 /* IID_TileMap.mm */; };
+		F0D7072014A5896E00EC7633 /* Standins Sheet_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0D7071E14A5896E00EC7633 /* Standins Sheet_default.plist */; };
+		F0D7072114A5896E00EC7633 /* Standins Sheet_default.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D7071F14A5896E00EC7633 /* Standins Sheet_default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -695,15 +696,15 @@
 		F01D654F14A55D7A00FE8B9A /* LICENSE_Box2D.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Box2D.txt; path = libs/LICENSE_Box2D.txt; sourceTree = "<group>"; };
 		F01D655114A55D7A00FE8B9A /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		F01D655214A55D7A00FE8B9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F01D655414A55D7A00FE8B9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F01D655414A55D7A00FE8B9A /* AppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AppDelegate.h; sourceTree = "<group>"; };
 		F01D655514A55D7A00FE8B9A /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		F01D655714A55D7A00FE8B9A /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F01D655714A55D7A00FE8B9A /* RootViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = RootViewController.h; sourceTree = "<group>"; };
 		F01D655814A55D7A00FE8B9A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldLayer.h; path = THE_KEY/HelloWorldLayer.h; sourceTree = "<group>"; };
 		F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = HelloWorldLayer.mm; path = THE_KEY/HelloWorldLayer.mm; sourceTree = "<group>"; };
-		F01D655D14A55D7A00FE8B9A /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
+		F01D655D14A55D7A00FE8B9A /* GLES-Render.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		F01D655E14A55D7A00FE8B9A /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
-		F01D656014A55D7A00FE8B9A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		F01D656014A55D7A00FE8B9A /* GameConfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = GameConfig.h; sourceTree = "<group>"; };
 		F01D656114A55D7A00FE8B9A /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
 		F01D656A14A55E0C00FE8B9A /* btBulletCollisionCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletCollisionCommon.h; sourceTree = "<group>"; };
 		F01D656B14A55E0C00FE8B9A /* btBulletDynamicsCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletDynamicsCommon.h; sourceTree = "<group>"; };
@@ -1214,26 +1215,26 @@
 		F0D706F514A5665600EC7633 /* Button_Pressed-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Pressed-01.png"; sourceTree = "<group>"; };
 		F0D706F614A5665600EC7633 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		F0D706F714A5665600EC7633 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
-		F0D706FE14A566BF00EC7633 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		F0D706FE14A566BF00EC7633 /* GameManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = GameManager.h; sourceTree = "<group>"; };
 		F0D706FF14A566BF00EC7633 /* GameManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameManager.mm; sourceTree = "<group>"; };
-		F0D7070214A566E700EC7633 /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
-		F0D7070314A566E700EC7633 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Control_Layer.h; sourceTree = "<group>"; };
-		F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Control_Layer.mm; sourceTree = "<group>"; };
-		F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Game_Scene.h; sourceTree = "<group>"; };
-		F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Game_Scene.mm; sourceTree = "<group>"; };
-		F0D7070814A568DB00EC7633 /* IID_Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Gameplay.h; sourceTree = "<group>"; };
-		F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Gameplay.mm; sourceTree = "<group>"; };
-		F0D7070F14A5693800EC7633 /* AFC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFC.h; sourceTree = "<group>"; };
+		F0D7070214A566E700EC7633 /* CommonProtocols.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = CommonProtocols.h; sourceTree = "<group>"; };
+		F0D7070314A566E700EC7633 /* Constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Constants.h; sourceTree = "<group>"; };
+		F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Control_Layer.h; sourceTree = "<group>"; };
+		F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Control_Layer.mm; sourceTree = "<group>"; };
+		F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Game_Scene.h; sourceTree = "<group>"; };
+		F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Game_Scene.mm; sourceTree = "<group>"; };
+		F0D7070814A568DB00EC7633 /* IID_Gameplay.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Gameplay.h; sourceTree = "<group>"; };
+		F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Gameplay.mm; sourceTree = "<group>"; };
+		F0D7070F14A5693800EC7633 /* AFC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AFC.h; sourceTree = "<group>"; };
 		F0D7071014A5693800EC7633 /* AFC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AFC.mm; sourceTree = "<group>"; };
-		F0D7071114A5693800EC7633 /* IID_Game_Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Game_Character.h; sourceTree = "<group>"; };
+		F0D7071114A5693800EC7633 /* IID_Game_Character.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Game_Character.h; sourceTree = "<group>"; };
 		F0D7071214A5693800EC7633 /* IID_Game_Character.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Game_Character.mm; sourceTree = "<group>"; };
 		F0D7071314A5693800EC7633 /* IID_Game_Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Game_Object.h; sourceTree = "<group>"; };
 		F0D7071414A5693800EC7633 /* IID_Game_Object.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Game_Object.mm; sourceTree = "<group>"; };
-		F0D7071514A5693800EC7633 /* IID_Generic_Soldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_Generic_Soldier.h; sourceTree = "<group>"; };
+		F0D7071514A5693800EC7633 /* IID_Generic_Soldier.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Generic_Soldier.h; sourceTree = "<group>"; };
 		F0D7071614A5693800EC7633 /* IID_Generic_Soldier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_Generic_Soldier.mm; sourceTree = "<group>"; };
-		F0D7071B14A569B100EC7633 /* IID_TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IID_TileMap.h; sourceTree = "<group>"; };
-		F0D7071C14A569B200EC7633 /* IID_TileMap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IID_TileMap.mm; sourceTree = "<group>"; };
+		F0D7071E14A5896E00EC7633 /* Standins Sheet_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Standins Sheet_default.plist"; sourceTree = "<group>"; };
+		F0D7071F14A5896E00EC7633 /* Standins Sheet_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Standins Sheet_default.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2497,8 +2498,6 @@
 		F0D706CD14A5653E00EC7633 /* 2D Levels */ = {
 			isa = PBXGroup;
 			children = (
-				F0D7071B14A569B100EC7633 /* IID_TileMap.h */,
-				F0D7071C14A569B200EC7633 /* IID_TileMap.mm */,
 				F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */,
 				F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */,
 				F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */,
@@ -2558,6 +2557,8 @@
 		F0D706F114A565DA00EC7633 /* 2d */ = {
 			isa = PBXGroup;
 			children = (
+				F0D7071E14A5896E00EC7633 /* Standins Sheet_default.plist */,
+				F0D7071F14A5896E00EC7633 /* Standins Sheet_default.png */,
 				F0D706C914A564C700EC7633 /* test_level.tmx */,
 				F0D706C614A563DE00EC7633 /* tileset.png */,
 			);
@@ -2711,6 +2712,8 @@
 				F0D706F914A5665600EC7633 /* Button_Pressed-01.png in Resources */,
 				F0D706FA14A5665600EC7633 /* button.png in Resources */,
 				F0D706FB14A5665600EC7633 /* button1.png in Resources */,
+				F0D7072014A5896E00EC7633 /* Standins Sheet_default.plist in Resources */,
+				F0D7072114A5896E00EC7633 /* Standins Sheet_default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3076,7 +3079,6 @@
 				F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */,
 				F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */,
 				F0D7071A14A5693900EC7633 /* IID_Generic_Soldier.mm in Sources */,
-				F0D7071D14A569B200EC7633 /* IID_TileMap.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

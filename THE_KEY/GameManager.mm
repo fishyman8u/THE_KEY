@@ -61,8 +61,8 @@ static GameManager * _sharedGameManager = nil;
            // sceneToRun = [CreditsScene node];
         case kGameLevel1:
             CCLOG(@"Running initial test scene");
-           // sceneToRun = [IID_Game_Scene node];
-         //   if([sceneToRun initializeSceneWithTileMapFile:@"test_level.tmx"])
+           sceneToRun = [IID_Game_Scene node];
+            [sceneToRun initializeSceneWithTileMapFile:@"test_level.tmx"];
          //   {
          //       CCLOG(@"Scene loaded!");
          //   }

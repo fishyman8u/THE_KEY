@@ -10,32 +10,22 @@
 
 
 @implementation IID_Game_Scene
-@synthesize gamePlayLayer;
+//@synthesize gamePlayLayer;
 @synthesize control_layer;
 
 -(id) init
 {
-    self.gamePlayLayer = [IID_Gameplay node];
+   gameplay = [IID_Gameplay node];
     self.control_layer = [IID_Control_Layer node];
    
     return self;
 }
 
--(BOOL) initializeSceneWithTileMapFile:(NSString*)tmxFile
+-(void) initializeSceneWithTileMapFile:(NSString*)tmxFile
 {
-    IID_TileMap *tileMapLayer = [IID_TileMap node];
-    
-    
-    if(tileMapLayer != nil)
-    {
-    [tileMapLayer initializeWithTilemap:tmxFile];
-        [self.gamePlayLayer connectControlsWithRightJoystick:control_layer.rightJoystick andLeftJoystick:control_layer.leftJoystick andProneButton:control_layer.proneButton andCrouchButton:control_layer.crouchButton];
-        [self addChild:self.gamePlayLayer z:1];
-        [self addChild:self.control_layer z:2];
-     [self addChild:tileMapLayer z:0];  
-        return TRUE;
         
-    }
-    return FALSE;//error!
+    [gameplay initializeTileMap:tmxFile];    
+   
+    
 }
 @end

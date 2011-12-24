@@ -10,7 +10,7 @@
 #import "Constants.h"
 #import "CommonProtocols.h"
 //#import "Box2D_Test.h"
-//#import "IID_Game_Scene.h"
+#import "IID_Game_Scene.h"
 
 @interface GameManager : NSObject
 {

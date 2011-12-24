@@ -14,6 +14,7 @@
 #import "SneakyButton.h"
 #import "SneakyButtonSkinnedBase.h"
 #import "IID_Game_Character.h"
+#import "GameManager.h"
 //#import "IID_Static_Game_Object.h"
 #import "AFC.h"
 
@@ -22,6 +23,7 @@
     b2World *world;
     GLESDebugDraw *debugDraw;
     CCSpriteBatchNode *sceneSpriteBatchNode;
+    CCTMXTiledMap *tileMap;
     
 }
 //@property(assign, readwrite) b2World *world;
@@ -29,4 +31,5 @@
                          andLeftJoystick:(SneakyJoystick*)leftJoystick
                           andProneButton:(SneakyButton*)proneButton
                          andCrouchButton:(SneakyButton*)crouchButton;
+-(void) initializeTileMap:(NSString *) tmxFile;
 @end
