@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="200" height="200" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Test_Tileset" tilewidth="32" tileheight="32" spacing="2" margin="1">
+  <image source="Test_Tileset.png" trans="fff4ff" width="128" height="128"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="200" height="200">
+  <data encoding="base64" compression="zlib">
+   eJzt1TEKACEMRcEYvP+Z3XoxaifsTjHlhzSPtIhoL/noGznZwR/oA2r6gDV9wJz/ATV9QC0P3b4TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgiwZWOJzm
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1" width="200" height="200">
+  <object name="Player_Start" type="Player_position" x="401" y="47"/>
+ </objectgroup>
+</map>

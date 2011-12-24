@@ -363,6 +363,10 @@
 		F01D6AA014A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A4F14A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m */; };
 		F01D6AA114A55FDD00FE8B9A /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5214A55FDD00FE8B9A /* CC3Foundation.m */; };
 		F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5414A55FDD00FE8B9A /* CC3GLMatrix.m */; };
+		F0D706C114A562F000EC7633 /* Tilemap_test.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C014A562F000EC7633 /* Tilemap_test.m */; };
+		F0D706C414A5631100EC7633 /* Test_Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.m */; };
+		F0D706C814A563DE00EC7633 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C614A563DE00EC7633 /* tileset.png */; };
+		F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C914A564C700EC7633 /* test_level.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1156,6 +1160,12 @@
 		F01D6A5514A55FDD00FE8B9A /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Logging.h; sourceTree = "<group>"; };
 		F01D6A5614A55FDD00FE8B9A /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
 		F01D6A5714A55FDD00FE8B9A /* CC3MatrixMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3MatrixMath.h; sourceTree = "<group>"; };
+		F0D706BF14A562F000EC7633 /* Tilemap_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tilemap_test.h; sourceTree = "<group>"; };
+		F0D706C014A562F000EC7633 /* Tilemap_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tilemap_test.m; sourceTree = "<group>"; };
+		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Scene.h; path = THE_KEY/Test_Scene.h; sourceTree = "<group>"; };
+		F0D706C314A5631100EC7633 /* Test_Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Scene.m; path = THE_KEY/Test_Scene.m; sourceTree = "<group>"; };
+		F0D706C614A563DE00EC7633 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset.png; sourceTree = "<group>"; };
+		F0D706C914A564C700EC7633 /* test_level.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test_level.tmx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1180,6 +1190,10 @@
 		F01D637014A55D7600FE8B9A = {
 			isa = PBXGroup;
 			children = (
+				F0D706C914A564C700EC7633 /* test_level.tmx */,
+				F0D706C614A563DE00EC7633 /* tileset.png */,
+				F0D706C214A5631100EC7633 /* Test_Scene.h */,
+				F0D706C314A5631100EC7633 /* Test_Scene.m */,
 				F01D638F14A55D7600FE8B9A /* THE_KEY */,
 				F01D637E14A55D7600FE8B9A /* Frameworks */,
 				F01D637C14A55D7600FE8B9A /* Products */,
@@ -1224,6 +1238,8 @@
 				F01D639014A55D7600FE8B9A /* Resources */,
 				F01D63A414A55D7600FE8B9A /* libs */,
 				F01D655014A55D7A00FE8B9A /* Supporting Files */,
+				F0D706BF14A562F000EC7633 /* Tilemap_test.h */,
+				F0D706C014A562F000EC7633 /* Tilemap_test.m */,
 			);
 			path = THE_KEY;
 			sourceTree = "<group>";
@@ -2442,6 +2458,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */,
+				F0D706C814A563DE00EC7633 /* tileset.png in Resources */,
 				F01D639214A55D7600FE8B9A /* Default.png in Resources */,
 				F01D639414A55D7600FE8B9A /* fps_images.png in Resources */,
 				F01D639614A55D7600FE8B9A /* Icon-72.png in Resources */,
@@ -2800,6 +2818,8 @@
 				F01D6AA014A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m in Sources */,
 				F01D6AA114A55FDD00FE8B9A /* CC3Foundation.m in Sources */,
 				F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */,
+				F0D706C114A562F000EC7633 /* Tilemap_test.m in Sources */,
+				F0D706C414A5631100EC7633 /* Test_Scene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
