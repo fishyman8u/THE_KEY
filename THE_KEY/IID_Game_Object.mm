@@ -10,7 +10,7 @@
 
 @implementation IID_Game_Object
 @synthesize gameObjectType;
-@synthesize rotation;
+//@synthesize rotation;
 @synthesize isActive;
 @synthesize reactsToScreenBoundaries;
 

@@ -134,6 +134,7 @@ static GameManager * _sharedGameManager = nil;
         case kCreditsScene:
         case kIntroScene:
         case kGameLevel1:
+            levelSize = CGSizeMake(15.0f*64.0f, 15.0f*64.0f);
         case kLevelCompleteScene:
             levelSize = screenSize;
             break;

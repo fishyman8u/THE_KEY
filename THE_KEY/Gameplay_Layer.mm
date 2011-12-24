@@ -14,10 +14,25 @@
                           andProneButton:(SneakyButton*)proneButton
                          andCrouchButton:(SneakyButton*)crouchButton
 {
+    AFC * player = (AFC*) [sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
+    if(player !=nil){
+    [player setLeft_Joystick:leftJoystick];
+    [player setRight_Joystick:rightJoystick];
+    [player setProne:proneButton];
+    [player setCrouch:crouchButton];
+        CCLOG(@"Connecting joystick and buttons to player!");
+    }
+    else
+    {
+        CCLOG(@"NO PLAYER CONTROLLED UNIT OR ERROR CONNECTING JOYSTICKS!");
+    }
     //tie the controls to the appropriate unit
 }
 -(void) adjustLayer//relies on Gamemanager for level size!
 {
+    
+    
+    
     IID_Generic_Soldier *player = (IID_Generic_Soldier *)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
     float x_pos = player.position.x;
     float y_pos = player.position.y;
@@ -56,6 +71,7 @@
                               location.y/PTM_RATIO);
     bodyDef.allowSleep = false;
     b2Body *body = world->CreateBody(&bodyDef);
+    
     body->SetUserData(sprite);
     sprite.body = body;
     
@@ -127,6 +143,12 @@
                 if([name isEqualToString: @"AFC"]) {
                     [self createObjectOfType:kAFC withHealth:100 atLocation:location withZValue:kAFC_Player_Z_Value andTag:kAFC_Player_TagValue];
                     CCLOG(@"AFC Player created at x: %f and y: %f", location.x, location.y);
+                    AFC * player = (AFC*)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
+                    [player setIsPlayerControlled:YES];
+                    //player.rotation = 90.0f;
+                    [player setRotation:90.0f];
+                    Player_Exists = TRUE;
+                    //CCLOG(@"testing");
                 }
                 //create player object
                 //check type then use a message to the gameplay layer to initialize the object and enable the controls
@@ -147,7 +169,7 @@
     }
     
     [self addChild:map];
- 
+   
 }
 -(id) init
 {
@@ -168,12 +190,14 @@
         {
             CCLOG(@"ERROR, no tilemap for scene!");
         }
-        CGSize screen = [CCDirector sharedDirector].winSize;
+       // CGSize screen = [CCDirector sharedDirector].winSize;
+        [self schedule:@selector(update:)];
     }
     return self;
 }
 -(void)update:(ccTime)deltaTime
 {
+   // CCLOG(@"Updating!");
     CCArray *listOfGameObjects = [sceneSpriteBatchNode children];
     for(IID_Game_Character *character in listOfGameObjects)
     {
@@ -187,10 +211,16 @@
      IID_Game_Character *sprite = (IID_Game_Character *) b->GetUserData();
      sprite.position = ccp(b->GetPosition().x * PTM_RATIO, 
      b->GetPosition().y * PTM_RATIO);
-     sprite.rotation = CC_RADIANS_TO_DEGREES(b->GetAngle() * -1);
+         [sprite setRotation:CC_RADIANS_TO_DEGREES(b->GetAngle())];
+         
+    // sprite.rotation = CC_RADIANS_TO_DEGREES(b->GetAngle());
+       // CCLOG(@"Sprite Rotation: %f", sprite.rotation);
      }        
      }   
-     
+     if(Player_Exists)
+     {
+         [self adjustLayer];
+     }
     
 }
 

@@ -18,7 +18,7 @@
         [self addChild:test z:0];
         IID_Control_Layer *control_layer = [IID_Control_Layer node];
         [self addChild:control_layer z:5];
-        
+        [test connectControlsWithRightJoystick:control_layer.rightJoystick andLeftJoystick:control_layer.leftJoystick andProneButton:control_layer.proneButton andCrouchButton:control_layer.crouchButton];
     }
     return self;
 }

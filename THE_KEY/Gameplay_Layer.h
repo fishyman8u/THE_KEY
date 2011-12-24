@@ -25,6 +25,7 @@
     CCSpriteBatchNode *sceneSpriteBatchNode;
     b2World *world;
     GLESDebugDraw *debugDraw;
+    BOOL Player_Exists;
 }
 -(void) connectControlsWithRightJoystick:(SneakyJoystick*) rightJoystick 
                          andLeftJoystick:(SneakyJoystick*)leftJoystick

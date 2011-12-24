@@ -25,6 +25,7 @@
 #define RadianConvert PI / 180
 #define DegreeConvert 180 / PI
 #define PTM_RATIO 32.0
+#define kJoystick_velocity_scale 3.0
 //Damage will need to be defined some other way, plist?
 typedef struct {
     float degree, factor;

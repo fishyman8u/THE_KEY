@@ -16,12 +16,12 @@
     BOOL reactsToScreenBoundaries;
     CGSize screenSize;
     GameObjectType gameObjectType;
-    float rotation;
+    //float rotation;
 }
 @property(nonatomic) GameObjectType gameObjectType;
 @property(nonatomic, readwrite) BOOL isActive;
 @property(nonatomic, readwrite) BOOL reactsToScreenBoundaries;
-@property(nonatomic, readwrite) float rotation;
+//@property(nonatomic, readwrite) float rotation;
 
 -(void) updateStateWithDeltaTime:(ccTime)deltaTime
             andListofGameObjects:(CCArray*)listOfGameObjects;

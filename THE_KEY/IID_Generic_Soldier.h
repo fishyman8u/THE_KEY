@@ -11,6 +11,9 @@
 #import "SneakyJoystickSkinnedBase.h"
 #import "SneakyButton.h"
 #import "SneakyButtonSkinnedBase.h"
+#import "Constants.h"
+#import "CommonProtocols.h"
+#import "cocos2d.h"
 
 @interface IID_Generic_Soldier : IID_Game_Character
 {
@@ -33,6 +36,9 @@
     BOOL isCrouched;
     BOOL isAgainstWall;
     BOOL isBehindCover;
+    BOOL isRunning;
+    BOOL isOutofAmmo;
+    BOOL isUnderRecoil;
     //Enums
     WeaponType weapon;//
     
@@ -69,6 +75,8 @@
     BOOL move;
     CGPoint currentDestination;
     
+    //physics variables
+   // b2Vec2 *velocity;
 }
 @property(nonatomic, retain) CCAnimation *standing;
 @property(nonatomic, retain) CCAnimation *Standing_to_crouching;
@@ -98,9 +106,14 @@
 @property(nonatomic, retain) SneakyButton *cover;
 @property(nonatomic, retain) SneakyJoystick *left_Joystick;
 @property(nonatomic, retain) SneakyJoystick *right_Joystick;
-
+@property(nonatomic, assign) id <GameplayLayerDelegate> delegate;
 @property(nonatomic, readwrite) BOOL canShoot;
-
+@property(nonatomic, readwrite) BOOL decision_needed;
+@property(nonatomic, readwrite) BOOL move;
+@property(nonatomic, readwrite) BOOL moving;
+@property(nonatomic, readwrite) BOOL isOutofAmmo;
+@property(nonatomic, readwrite) BOOL isUnderRecoil;
 @property(nonatomic, readwrite) WeaponType weapon;
 
+//@property(nonatomic, readwrite) b2Vec2 
 @end
