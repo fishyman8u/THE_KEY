@@ -367,6 +367,22 @@
 		F0D706C414A5631100EC7633 /* Test_Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.m */; };
 		F0D706C814A563DE00EC7633 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C614A563DE00EC7633 /* tileset.png */; };
 		F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C914A564C700EC7633 /* test_level.tmx */; };
+		F0D706E314A5659500EC7633 /* Main_Menu.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706D014A5659500EC7633 /* Main_Menu.mm */; };
+		F0D706E414A5659500EC7633 /* MainMenuScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706D214A5659500EC7633 /* MainMenuScene.mm */; };
+		F0D706E514A5659500EC7633 /* OptionsScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706D414A5659500EC7633 /* OptionsScene.mm */; };
+		F0D706E614A5659500EC7633 /* Root_Menu_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706D614A5659500EC7633 /* Root_Menu_Scene.mm */; };
+		F0D706E714A5659500EC7633 /* Root_Menu.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706D814A5659500EC7633 /* Root_Menu.mm */; };
+		F0D706E814A5659500EC7633 /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706DA14A5659500EC7633 /* SneakyButton.m */; };
+		F0D706E914A5659500EC7633 /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706DC14A5659500EC7633 /* SneakyButtonSkinnedBase.m */; };
+		F0D706EA14A5659500EC7633 /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706DE14A5659500EC7633 /* SneakyJoystick.m */; };
+		F0D706EB14A5659500EC7633 /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706E014A5659500EC7633 /* SneakyJoystickSkinnedBase.m */; };
+		F0D706EC14A5659500EC7633 /* The Key Front Cover sm copy.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706E114A5659500EC7633 /* The Key Front Cover sm copy.png */; };
+		F0D706ED14A5659500EC7633 /* The_Key_IPAD_Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706E214A5659500EC7633 /* The_Key_IPAD_Cover.png */; };
+		F0D706F814A5665600EC7633 /* button_base-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706F414A5665600EC7633 /* button_base-01.png */; };
+		F0D706F914A5665600EC7633 /* Button_Pressed-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706F514A5665600EC7633 /* Button_Pressed-01.png */; };
+		F0D706FA14A5665600EC7633 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706F614A5665600EC7633 /* button.png */; };
+		F0D706FB14A5665600EC7633 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706F714A5665600EC7633 /* button1.png */; };
+		F0D7070014A566BF00EC7633 /* GameManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706FF14A566BF00EC7633 /* GameManager.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -675,8 +691,8 @@
 		F01D655514A55D7A00FE8B9A /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		F01D655714A55D7A00FE8B9A /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F01D655814A55D7A00FE8B9A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloWorldLayer.mm; sourceTree = "<group>"; };
+		F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldLayer.h; path = THE_KEY/HelloWorldLayer.h; sourceTree = "<group>"; };
+		F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = HelloWorldLayer.mm; path = THE_KEY/HelloWorldLayer.mm; sourceTree = "<group>"; };
 		F01D655D14A55D7A00FE8B9A /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		F01D655E14A55D7A00FE8B9A /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		F01D656014A55D7A00FE8B9A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
@@ -1160,12 +1176,40 @@
 		F01D6A5514A55FDD00FE8B9A /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Logging.h; sourceTree = "<group>"; };
 		F01D6A5614A55FDD00FE8B9A /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
 		F01D6A5714A55FDD00FE8B9A /* CC3MatrixMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3MatrixMath.h; sourceTree = "<group>"; };
-		F0D706BF14A562F000EC7633 /* Tilemap_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tilemap_test.h; sourceTree = "<group>"; };
-		F0D706C014A562F000EC7633 /* Tilemap_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tilemap_test.m; sourceTree = "<group>"; };
+		F0D706BF14A562F000EC7633 /* Tilemap_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tilemap_test.h; path = THE_KEY/Tilemap_test.h; sourceTree = "<group>"; };
+		F0D706C014A562F000EC7633 /* Tilemap_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tilemap_test.m; path = THE_KEY/Tilemap_test.m; sourceTree = "<group>"; };
 		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Scene.h; path = THE_KEY/Test_Scene.h; sourceTree = "<group>"; };
 		F0D706C314A5631100EC7633 /* Test_Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Scene.m; path = THE_KEY/Test_Scene.m; sourceTree = "<group>"; };
 		F0D706C614A563DE00EC7633 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset.png; sourceTree = "<group>"; };
 		F0D706C914A564C700EC7633 /* test_level.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test_level.tmx; sourceTree = "<group>"; };
+		F0D706CF14A5659500EC7633 /* Main_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main_Menu.h; sourceTree = "<group>"; };
+		F0D706D014A5659500EC7633 /* Main_Menu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Main_Menu.mm; sourceTree = "<group>"; };
+		F0D706D114A5659500EC7633 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
+		F0D706D214A5659500EC7633 /* MainMenuScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainMenuScene.mm; sourceTree = "<group>"; };
+		F0D706D314A5659500EC7633 /* OptionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsScene.h; sourceTree = "<group>"; };
+		F0D706D414A5659500EC7633 /* OptionsScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OptionsScene.mm; sourceTree = "<group>"; };
+		F0D706D514A5659500EC7633 /* Root_Menu_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Root_Menu_Scene.h; sourceTree = "<group>"; };
+		F0D706D614A5659500EC7633 /* Root_Menu_Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Root_Menu_Scene.mm; sourceTree = "<group>"; };
+		F0D706D714A5659500EC7633 /* Root_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Root_Menu.h; sourceTree = "<group>"; };
+		F0D706D814A5659500EC7633 /* Root_Menu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Root_Menu.mm; sourceTree = "<group>"; };
+		F0D706D914A5659500EC7633 /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
+		F0D706DA14A5659500EC7633 /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButton.m; sourceTree = "<group>"; };
+		F0D706DB14A5659500EC7633 /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
+		F0D706DC14A5659500EC7633 /* SneakyButtonSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButtonSkinnedBase.m; sourceTree = "<group>"; };
+		F0D706DD14A5659500EC7633 /* SneakyJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystick.h; sourceTree = "<group>"; };
+		F0D706DE14A5659500EC7633 /* SneakyJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystick.m; sourceTree = "<group>"; };
+		F0D706DF14A5659500EC7633 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
+		F0D706E014A5659500EC7633 /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
+		F0D706E114A5659500EC7633 /* The Key Front Cover sm copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "The Key Front Cover sm copy.png"; path = "THE_KEY/The Key Front Cover sm copy.png"; sourceTree = "<group>"; };
+		F0D706E214A5659500EC7633 /* The_Key_IPAD_Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = The_Key_IPAD_Cover.png; path = THE_KEY/The_Key_IPAD_Cover.png; sourceTree = "<group>"; };
+		F0D706F414A5665600EC7633 /* button_base-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_base-01.png"; sourceTree = "<group>"; };
+		F0D706F514A5665600EC7633 /* Button_Pressed-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Pressed-01.png"; sourceTree = "<group>"; };
+		F0D706F614A5665600EC7633 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		F0D706F714A5665600EC7633 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
+		F0D706FE14A566BF00EC7633 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		F0D706FF14A566BF00EC7633 /* GameManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameManager.mm; sourceTree = "<group>"; };
+		F0D7070214A566E700EC7633 /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
+		F0D7070314A566E700EC7633 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1190,10 +1234,8 @@
 		F01D637014A55D7600FE8B9A = {
 			isa = PBXGroup;
 			children = (
-				F0D706C914A564C700EC7633 /* test_level.tmx */,
-				F0D706C614A563DE00EC7633 /* tileset.png */,
-				F0D706C214A5631100EC7633 /* Test_Scene.h */,
-				F0D706C314A5631100EC7633 /* Test_Scene.m */,
+				F0D706F314A565F700EC7633 /* Tests */,
+				F0D706EF14A565C700EC7633 /* Resources */,
 				F01D638F14A55D7600FE8B9A /* THE_KEY */,
 				F01D637E14A55D7600FE8B9A /* Frameworks */,
 				F01D637C14A55D7600FE8B9A /* Products */,
@@ -1226,20 +1268,11 @@
 		F01D638F14A55D7600FE8B9A /* THE_KEY */ = {
 			isa = PBXGroup;
 			children = (
-				F01D655414A55D7A00FE8B9A /* AppDelegate.h */,
-				F01D655514A55D7A00FE8B9A /* AppDelegate.mm */,
-				F01D655714A55D7A00FE8B9A /* RootViewController.h */,
-				F01D655814A55D7A00FE8B9A /* RootViewController.m */,
-				F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */,
-				F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */,
-				F01D655D14A55D7A00FE8B9A /* GLES-Render.h */,
-				F01D655E14A55D7A00FE8B9A /* GLES-Render.mm */,
-				F01D656014A55D7A00FE8B9A /* GameConfig.h */,
-				F01D639014A55D7600FE8B9A /* Resources */,
+				F0D7070114A566C900EC7633 /* Constants and Protocols */,
+				F0D706FD14A566A300EC7633 /* Singleton Managers */,
+				F0D706FC14A5667600EC7633 /* App Delegate and base source */,
+				F0D706CB14A5652500EC7633 /* Scenes and Layers */,
 				F01D63A414A55D7600FE8B9A /* libs */,
-				F01D655014A55D7A00FE8B9A /* Supporting Files */,
-				F0D706BF14A562F000EC7633 /* Tilemap_test.h */,
-				F0D706C014A562F000EC7633 /* Tilemap_test.m */,
 			);
 			path = THE_KEY;
 			sourceTree = "<group>";
@@ -1260,11 +1293,13 @@
 				F01D656114A55D7A00FE8B9A /* blocks.png */,
 			);
 			name = Resources;
+			path = THE_KEY;
 			sourceTree = "<group>";
 		};
 		F01D63A414A55D7600FE8B9A /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F0D706EE14A565A300EC7633 /* Sneaky Buttons and Joystick */,
 				F01D656814A55E0C00FE8B9A /* Bullet Wrapping */,
 				F01D69B114A55FDD00FE8B9A /* cocos3d */,
 				F01D649A14A55D7800FE8B9A /* LICENSE_cocos2d.txt */,
@@ -2407,6 +2442,148 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		F0D706CB14A5652500EC7633 /* Scenes and Layers */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706CE14A5654900EC7633 /* 3d Levels */,
+				F0D706CD14A5653E00EC7633 /* 2D Levels */,
+				F0D706CC14A5653400EC7633 /* Menus */,
+			);
+			name = "Scenes and Layers";
+			sourceTree = "<group>";
+		};
+		F0D706CC14A5653400EC7633 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706CF14A5659500EC7633 /* Main_Menu.h */,
+				F0D706D014A5659500EC7633 /* Main_Menu.mm */,
+				F0D706D114A5659500EC7633 /* MainMenuScene.h */,
+				F0D706D214A5659500EC7633 /* MainMenuScene.mm */,
+				F0D706D314A5659500EC7633 /* OptionsScene.h */,
+				F0D706D414A5659500EC7633 /* OptionsScene.mm */,
+				F0D706D514A5659500EC7633 /* Root_Menu_Scene.h */,
+				F0D706D614A5659500EC7633 /* Root_Menu_Scene.mm */,
+				F0D706D714A5659500EC7633 /* Root_Menu.h */,
+				F0D706D814A5659500EC7633 /* Root_Menu.mm */,
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
+		F0D706CD14A5653E00EC7633 /* 2D Levels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "2D Levels";
+			sourceTree = "<group>";
+		};
+		F0D706CE14A5654900EC7633 /* 3d Levels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "3d Levels";
+			sourceTree = "<group>";
+		};
+		F0D706EE14A565A300EC7633 /* Sneaky Buttons and Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706D914A5659500EC7633 /* SneakyButton.h */,
+				F0D706DA14A5659500EC7633 /* SneakyButton.m */,
+				F0D706DB14A5659500EC7633 /* SneakyButtonSkinnedBase.h */,
+				F0D706DC14A5659500EC7633 /* SneakyButtonSkinnedBase.m */,
+				F0D706DD14A5659500EC7633 /* SneakyJoystick.h */,
+				F0D706DE14A5659500EC7633 /* SneakyJoystick.m */,
+				F0D706DF14A5659500EC7633 /* SneakyJoystickSkinnedBase.h */,
+				F0D706E014A5659500EC7633 /* SneakyJoystickSkinnedBase.m */,
+			);
+			name = "Sneaky Buttons and Joystick";
+			sourceTree = "<group>";
+		};
+		F0D706EF14A565C700EC7633 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F01D639014A55D7600FE8B9A /* Resources */,
+				F0D706F214A565E200EC7633 /* 3d */,
+				F0D706F114A565DA00EC7633 /* 2d */,
+				F0D706F014A565D000EC7633 /* Menus */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F0D706F014A565D000EC7633 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706F414A5665600EC7633 /* button_base-01.png */,
+				F0D706F514A5665600EC7633 /* Button_Pressed-01.png */,
+				F0D706F614A5665600EC7633 /* button.png */,
+				F0D706F714A5665600EC7633 /* button1.png */,
+				F0D706E114A5659500EC7633 /* The Key Front Cover sm copy.png */,
+				F0D706E214A5659500EC7633 /* The_Key_IPAD_Cover.png */,
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
+		F0D706F114A565DA00EC7633 /* 2d */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706C914A564C700EC7633 /* test_level.tmx */,
+				F0D706C614A563DE00EC7633 /* tileset.png */,
+			);
+			name = 2d;
+			sourceTree = "<group>";
+		};
+		F0D706F214A565E200EC7633 /* 3d */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 3d;
+			sourceTree = "<group>";
+		};
+		F0D706F314A565F700EC7633 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706C214A5631100EC7633 /* Test_Scene.h */,
+				F0D706C314A5631100EC7633 /* Test_Scene.m */,
+				F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */,
+				F0D706BF14A562F000EC7633 /* Tilemap_test.h */,
+				F0D706C014A562F000EC7633 /* Tilemap_test.m */,
+				F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		F0D706FC14A5667600EC7633 /* App Delegate and base source */ = {
+			isa = PBXGroup;
+			children = (
+				F01D655014A55D7A00FE8B9A /* Supporting Files */,
+				F01D655414A55D7A00FE8B9A /* AppDelegate.h */,
+				F01D655514A55D7A00FE8B9A /* AppDelegate.mm */,
+				F01D655714A55D7A00FE8B9A /* RootViewController.h */,
+				F01D655814A55D7A00FE8B9A /* RootViewController.m */,
+				F01D655D14A55D7A00FE8B9A /* GLES-Render.h */,
+				F01D655E14A55D7A00FE8B9A /* GLES-Render.mm */,
+				F01D656014A55D7A00FE8B9A /* GameConfig.h */,
+			);
+			name = "App Delegate and base source";
+			sourceTree = "<group>";
+		};
+		F0D706FD14A566A300EC7633 /* Singleton Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F0D706FE14A566BF00EC7633 /* GameManager.h */,
+				F0D706FF14A566BF00EC7633 /* GameManager.mm */,
+			);
+			name = "Singleton Managers";
+			sourceTree = "<group>";
+		};
+		F0D7070114A566C900EC7633 /* Constants and Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0D7070214A566E700EC7633 /* CommonProtocols.h */,
+				F0D7070314A566E700EC7633 /* Constants.h */,
+			);
+			name = "Constants and Protocols";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2472,6 +2649,12 @@
 				F01D656214A55D7A00FE8B9A /* blocks.png in Resources */,
 				F01D673A14A55E0C00FE8B9A /* CMakeLists.txt in Resources */,
 				F01D6A6814A55FDD00FE8B9A /* PVRT_Removed_Files.txt in Resources */,
+				F0D706EC14A5659500EC7633 /* The Key Front Cover sm copy.png in Resources */,
+				F0D706ED14A5659500EC7633 /* The_Key_IPAD_Cover.png in Resources */,
+				F0D706F814A5665600EC7633 /* button_base-01.png in Resources */,
+				F0D706F914A5665600EC7633 /* Button_Pressed-01.png in Resources */,
+				F0D706FA14A5665600EC7633 /* button.png in Resources */,
+				F0D706FB14A5665600EC7633 /* button1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2820,6 +3003,16 @@
 				F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */,
 				F0D706C114A562F000EC7633 /* Tilemap_test.m in Sources */,
 				F0D706C414A5631100EC7633 /* Test_Scene.m in Sources */,
+				F0D706E314A5659500EC7633 /* Main_Menu.mm in Sources */,
+				F0D706E414A5659500EC7633 /* MainMenuScene.mm in Sources */,
+				F0D706E514A5659500EC7633 /* OptionsScene.mm in Sources */,
+				F0D706E614A5659500EC7633 /* Root_Menu_Scene.mm in Sources */,
+				F0D706E714A5659500EC7633 /* Root_Menu.mm in Sources */,
+				F0D706E814A5659500EC7633 /* SneakyButton.m in Sources */,
+				F0D706E914A5659500EC7633 /* SneakyButtonSkinnedBase.m in Sources */,
+				F0D706EA14A5659500EC7633 /* SneakyJoystick.m in Sources */,
+				F0D706EB14A5659500EC7633 /* SneakyJoystickSkinnedBase.m in Sources */,
+				F0D7070014A566BF00EC7633 /* GameManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
