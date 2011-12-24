@@ -365,6 +365,8 @@
 		F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5414A55FDD00FE8B9A /* CC3GLMatrix.m */; };
 		F02646DB14A58B2D00C96B85 /* AFC.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02646DA14A58B2D00C96B85 /* AFC.plist */; };
 		F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */; };
+		F03988DC14A5A0D000DA9C8F /* Joystick_base-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */; };
+		F03988DD14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */; };
 		F0D706C414A5631100EC7633 /* Test_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.mm */; };
 		F0D706C814A563DE00EC7633 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C614A563DE00EC7633 /* tileset.png */; };
 		F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C914A564C700EC7633 /* test_level.tmx */; };
@@ -1186,10 +1188,14 @@
 		F01D6A5614A55FDD00FE8B9A /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
 		F01D6A5714A55FDD00FE8B9A /* CC3MatrixMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3MatrixMath.h; sourceTree = "<group>"; };
 		F02646DA14A58B2D00C96B85 /* AFC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AFC.plist; sourceTree = "<group>"; };
-		F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Gameplay_Layer.mm; path = THE_KEY/Gameplay_Layer.mm; sourceTree = "<group>"; };
-		F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay_Layer.h; path = THE_KEY/Gameplay_Layer.h; sourceTree = "<group>"; };
-		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Scene.h; path = THE_KEY/Test_Scene.h; sourceTree = "<group>"; };
-		F0D706C314A5631100EC7633 /* Test_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Test_Scene.mm; path = THE_KEY/Test_Scene.mm; sourceTree = "<group>"; };
+		F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Gameplay_Layer.mm; sourceTree = "<group>"; };
+		F03988D814A5A0D000DA9C8F /* button_base-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_base-01.png"; sourceTree = "<group>"; };
+		F03988D914A5A0D000DA9C8F /* Button_Pressed-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Pressed-01.png"; sourceTree = "<group>"; };
+		F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joystick_base-01.png"; sourceTree = "<group>"; };
+		F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joystick_Cross_Hairs-01.png"; sourceTree = "<group>"; };
+		F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gameplay_Layer.h; sourceTree = "<group>"; };
+		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Scene.h; sourceTree = "<group>"; };
+		F0D706C314A5631100EC7633 /* Test_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Test_Scene.mm; sourceTree = "<group>"; };
 		F0D706C614A563DE00EC7633 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset.png; sourceTree = "<group>"; };
 		F0D706C914A564C700EC7633 /* test_level.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test_level.tmx; sourceTree = "<group>"; };
 		F0D706CF14A5659500EC7633 /* Main_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main_Menu.h; sourceTree = "<group>"; };
@@ -1258,6 +1264,10 @@
 		F01D637014A55D7600FE8B9A = {
 			isa = PBXGroup;
 			children = (
+				F03988D814A5A0D000DA9C8F /* button_base-01.png */,
+				F03988D914A5A0D000DA9C8F /* Button_Pressed-01.png */,
+				F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */,
+				F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */,
 				F02646DA14A58B2D00C96B85 /* AFC.plist */,
 				F0D706F314A565F700EC7633 /* Tests */,
 				F0D706EF14A565C700EC7633 /* Resources */,
@@ -2498,6 +2508,10 @@
 		F0D706CD14A5653E00EC7633 /* 2D Levels */ = {
 			isa = PBXGroup;
 			children = (
+				F0D706C214A5631100EC7633 /* Test_Scene.h */,
+				F0D706C314A5631100EC7633 /* Test_Scene.mm */,
+				F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */,
+				F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */,
 				F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */,
 				F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */,
 				F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */,
@@ -2573,11 +2587,7 @@
 		F0D706F314A565F700EC7633 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F0D706C214A5631100EC7633 /* Test_Scene.h */,
-				F0D706C314A5631100EC7633 /* Test_Scene.mm */,
 				F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */,
-				F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */,
-				F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */,
 				F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */,
 			);
 			name = Tests;
@@ -2690,6 +2700,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D706F814A5665600EC7633 /* button_base-01.png in Resources */,
+				F0D706F914A5665600EC7633 /* Button_Pressed-01.png in Resources */,
+				F03988DC14A5A0D000DA9C8F /* Joystick_base-01.png in Resources */,
+				F03988DD14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png in Resources */,
 				F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */,
 				F0D706C814A563DE00EC7633 /* tileset.png in Resources */,
 				F01D639214A55D7600FE8B9A /* Default.png in Resources */,
@@ -2706,8 +2720,6 @@
 				F01D6A6814A55FDD00FE8B9A /* PVRT_Removed_Files.txt in Resources */,
 				F0D706EC14A5659500EC7633 /* The Key Front Cover sm copy.png in Resources */,
 				F0D706ED14A5659500EC7633 /* The_Key_IPAD_Cover.png in Resources */,
-				F0D706F814A5665600EC7633 /* button_base-01.png in Resources */,
-				F0D706F914A5665600EC7633 /* Button_Pressed-01.png in Resources */,
 				F0D706FA14A5665600EC7633 /* button.png in Resources */,
 				F0D706FB14A5665600EC7633 /* button1.png in Resources */,
 				F0D7072014A5896E00EC7633 /* Standins Sheet_default.plist in Resources */,

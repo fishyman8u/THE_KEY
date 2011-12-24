@@ -8,7 +8,7 @@
 
 #import "GameManager.h"
 #import "Root_Menu_Scene.h"
-
+#import "Test_Scene.h"
 @implementation GameManager
 static GameManager * _sharedGameManager = nil;
 @synthesize isMusicOn;
@@ -62,7 +62,7 @@ static GameManager * _sharedGameManager = nil;
            // sceneToRun = [CreditsScene node];
         case kGameLevel1:
             CCLOG(@"Running initial test scene");
-           sceneToRun = [Gameplay_Layer node];
+           sceneToRun = [Test_Scene node];
            // [sceneToRun initializeSceneWithTileMapFile:@"test_level.tmx"];
          //   {
          //       CCLOG(@"Scene loaded!");

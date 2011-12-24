@@ -81,7 +81,8 @@
     self = [super init];
     if(self)
     {
-        
+        CCLOG(@"Setting up buttons and Joysticks");
+        [self initJoystickAndButtons];
     }
     return self;
 }

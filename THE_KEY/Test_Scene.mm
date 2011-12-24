@@ -15,9 +15,10 @@
     if(self)
     {
         Gameplay_Layer *test = [Gameplay_Layer node];
-        [self addChild:test];
+        [self addChild:test z:0];
         IID_Control_Layer *control_layer = [IID_Control_Layer node];
-        [self addChild:control_layer];
+        [self addChild:control_layer z:5];
+        
     }
     return self;
 }
