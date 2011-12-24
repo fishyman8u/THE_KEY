@@ -8,15 +8,15 @@
 
 #import "cocos2d.h"
 #import "IID_Control_Layer.h"
-#import "IID_Gameplay.h"
+#import "Gameplay.h"
 //#import "IID_TileMap.h"
-
+#import "Constants.h"
 @interface IID_Game_Scene : CCScene
 {
  
     
     IID_Control_Layer * control_layer;
-    IID_Gameplay *gameplay;
+  // Gameplay *gameplay;
 }
 -(void) initializeSceneWithTileMapFile:(NSString*)tmxFile;
 //@property(nonatomic, readwrite, assign) IID_Gameplay *gamePlayLayer;

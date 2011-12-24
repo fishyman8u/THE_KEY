@@ -14,6 +14,7 @@ static GameManager * _sharedGameManager = nil;
 @synthesize isMusicOn;
 @synthesize hasPlayerDied;
 @synthesize isSoundEffectsOn;
+@synthesize currentScene;
 +(GameManager *)sharedGameManager {
     @synchronized ([GameManager class])
     {
@@ -61,8 +62,8 @@ static GameManager * _sharedGameManager = nil;
            // sceneToRun = [CreditsScene node];
         case kGameLevel1:
             CCLOG(@"Running initial test scene");
-           sceneToRun = [IID_Game_Scene node];
-            [sceneToRun initializeSceneWithTileMapFile:@"test_level.tmx"];
+           sceneToRun = [Gameplay_Layer node];
+           // [sceneToRun initializeSceneWithTileMapFile:@"test_level.tmx"];
          //   {
          //       CCLOG(@"Scene loaded!");
          //   }

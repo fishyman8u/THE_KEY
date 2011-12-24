@@ -23,7 +23,7 @@
     if(self = [super init])
     {
         CCLOG(@"Character init!");
-        [self changeState:kStateSpawning];
+       // [self changeState:kStateSpawning];
         self.body = NULL;
         //self.velocity = b2Vec2(0.0f, 0.0f);
         self.destination = ccp(0.0f, 0.0f);

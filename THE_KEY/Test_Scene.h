@@ -7,8 +7,8 @@
 //
 
 #import "CCScene.h"
-#import "Tilemap_test.h"
-
+#import "Gameplay_Layer.h"
+#import "IID_Control_Layer.h"
 @interface Test_Scene : CCScene
 
 @end

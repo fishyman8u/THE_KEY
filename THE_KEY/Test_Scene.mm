@@ -14,8 +14,10 @@
     self = [super init];
     if(self)
     {
-        Tilemap_test *test = [Tilemap_test node];
+        Gameplay_Layer *test = [Gameplay_Layer node];
         [self addChild:test];
+        IID_Control_Layer *control_layer = [IID_Control_Layer node];
+        [self addChild:control_layer];
     }
     return self;
 }

@@ -4,11 +4,11 @@
   <image source="tileset.png" width="512" height="512"/>
  </tileset>
  <layer name="Map" width="15" height="15">
-  <data encoding="base64" compression="zlib">
-   eJxjYmBgYCITC+HAlOglRj8nGiZFP7pedDMo0YtPPyV68YUVIf201ktu2hnFCAwAvO0FvQ==
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NiYGBgIhML4cCU6CVGPycaJkU/ul50MyjRi08/JXrxhRUh/bTWS27aGcUIDAAL7at+hAMAAA==
   </data>
  </layer>
  <objectgroup name="Objects" width="15" height="15">
-  <object name="Player1" type="AFC" x="749" y="91" width="56" height="44"/>
+  <object name="Player1" type="AFC" x="579" y="803" width="56" height="44"/>
  </objectgroup>
 </map>

@@ -363,8 +363,9 @@
 		F01D6AA014A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A4F14A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m */; };
 		F01D6AA114A55FDD00FE8B9A /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5214A55FDD00FE8B9A /* CC3Foundation.m */; };
 		F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = F01D6A5414A55FDD00FE8B9A /* CC3GLMatrix.m */; };
-		F0D706C114A562F000EC7633 /* Tilemap_test.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C014A562F000EC7633 /* Tilemap_test.m */; };
-		F0D706C414A5631100EC7633 /* Test_Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.m */; };
+		F02646DB14A58B2D00C96B85 /* AFC.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02646DA14A58B2D00C96B85 /* AFC.plist */; };
+		F0D706C114A562F000EC7633 /* Gameplay_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C014A562F000EC7633 /* Gameplay_Layer.mm */; };
+		F0D706C414A5631100EC7633 /* Test_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.mm */; };
 		F0D706C814A563DE00EC7633 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C614A563DE00EC7633 /* tileset.png */; };
 		F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C914A564C700EC7633 /* test_level.tmx */; };
 		F0D706E314A5659500EC7633 /* Main_Menu.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706D014A5659500EC7633 /* Main_Menu.mm */; };
@@ -385,7 +386,6 @@
 		F0D7070014A566BF00EC7633 /* GameManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706FF14A566BF00EC7633 /* GameManager.mm */; };
 		F0D7070A14A568DB00EC7633 /* IID_Control_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */; };
 		F0D7070B14A568DB00EC7633 /* IID_Game_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */; };
-		F0D7070C14A568DB00EC7633 /* IID_Gameplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */; };
 		F0D7071714A5693900EC7633 /* AFC.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071014A5693800EC7633 /* AFC.mm */; };
 		F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071214A5693800EC7633 /* IID_Game_Character.mm */; };
 		F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D7071414A5693800EC7633 /* IID_Game_Object.mm */; };
@@ -1185,10 +1185,11 @@
 		F01D6A5514A55FDD00FE8B9A /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Logging.h; sourceTree = "<group>"; };
 		F01D6A5614A55FDD00FE8B9A /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
 		F01D6A5714A55FDD00FE8B9A /* CC3MatrixMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3MatrixMath.h; sourceTree = "<group>"; };
-		F0D706BF14A562F000EC7633 /* Tilemap_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tilemap_test.h; path = THE_KEY/Tilemap_test.h; sourceTree = "<group>"; };
-		F0D706C014A562F000EC7633 /* Tilemap_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tilemap_test.m; path = THE_KEY/Tilemap_test.m; sourceTree = "<group>"; };
+		F02646DA14A58B2D00C96B85 /* AFC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AFC.plist; sourceTree = "<group>"; };
+		F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay_Layer.h; path = THE_KEY/Gameplay_Layer.h; sourceTree = "<group>"; };
+		F0D706C014A562F000EC7633 /* Gameplay_Layer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Gameplay_Layer.mm; path = THE_KEY/Gameplay_Layer.mm; sourceTree = "<group>"; };
 		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Scene.h; path = THE_KEY/Test_Scene.h; sourceTree = "<group>"; };
-		F0D706C314A5631100EC7633 /* Test_Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Scene.m; path = THE_KEY/Test_Scene.m; sourceTree = "<group>"; };
+		F0D706C314A5631100EC7633 /* Test_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Test_Scene.mm; path = THE_KEY/Test_Scene.mm; sourceTree = "<group>"; };
 		F0D706C614A563DE00EC7633 /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset.png; sourceTree = "<group>"; };
 		F0D706C914A564C700EC7633 /* test_level.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test_level.tmx; sourceTree = "<group>"; };
 		F0D706CF14A5659500EC7633 /* Main_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main_Menu.h; sourceTree = "<group>"; };
@@ -1219,12 +1220,10 @@
 		F0D706FF14A566BF00EC7633 /* GameManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameManager.mm; sourceTree = "<group>"; };
 		F0D7070214A566E700EC7633 /* CommonProtocols.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = CommonProtocols.h; sourceTree = "<group>"; };
 		F0D7070314A566E700EC7633 /* Constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Constants.h; sourceTree = "<group>"; };
-		F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Control_Layer.h; sourceTree = "<group>"; };
+		F0D7070414A568DB00EC7633 /* IID_Control_Layer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = IID_Control_Layer.h; sourceTree = "<group>"; };
 		F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Control_Layer.mm; sourceTree = "<group>"; };
-		F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Game_Scene.h; sourceTree = "<group>"; };
+		F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = IID_Game_Scene.h; sourceTree = "<group>"; };
 		F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Game_Scene.mm; sourceTree = "<group>"; };
-		F0D7070814A568DB00EC7633 /* IID_Gameplay.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Gameplay.h; sourceTree = "<group>"; };
-		F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Gameplay.mm; sourceTree = "<group>"; };
 		F0D7070F14A5693800EC7633 /* AFC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AFC.h; sourceTree = "<group>"; };
 		F0D7071014A5693800EC7633 /* AFC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AFC.mm; sourceTree = "<group>"; };
 		F0D7071114A5693800EC7633 /* IID_Game_Character.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IID_Game_Character.h; sourceTree = "<group>"; };
@@ -1259,6 +1258,7 @@
 		F01D637014A55D7600FE8B9A = {
 			isa = PBXGroup;
 			children = (
+				F02646DA14A58B2D00C96B85 /* AFC.plist */,
 				F0D706F314A565F700EC7633 /* Tests */,
 				F0D706EF14A565C700EC7633 /* Resources */,
 				F01D638F14A55D7600FE8B9A /* THE_KEY */,
@@ -2502,8 +2502,6 @@
 				F0D7070514A568DB00EC7633 /* IID_Control_Layer.mm */,
 				F0D7070614A568DB00EC7633 /* IID_Game_Scene.h */,
 				F0D7070714A568DB00EC7633 /* IID_Game_Scene.mm */,
-				F0D7070814A568DB00EC7633 /* IID_Gameplay.h */,
-				F0D7070914A568DB00EC7633 /* IID_Gameplay.mm */,
 			);
 			name = "2D Levels";
 			sourceTree = "<group>";
@@ -2576,10 +2574,10 @@
 			isa = PBXGroup;
 			children = (
 				F0D706C214A5631100EC7633 /* Test_Scene.h */,
-				F0D706C314A5631100EC7633 /* Test_Scene.m */,
+				F0D706C314A5631100EC7633 /* Test_Scene.mm */,
 				F01D655A14A55D7A00FE8B9A /* HelloWorldLayer.h */,
-				F0D706BF14A562F000EC7633 /* Tilemap_test.h */,
-				F0D706C014A562F000EC7633 /* Tilemap_test.m */,
+				F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */,
+				F0D706C014A562F000EC7633 /* Gameplay_Layer.mm */,
 				F01D655B14A55D7A00FE8B9A /* HelloWorldLayer.mm */,
 			);
 			name = Tests;
@@ -2714,6 +2712,7 @@
 				F0D706FB14A5665600EC7633 /* button1.png in Resources */,
 				F0D7072014A5896E00EC7633 /* Standins Sheet_default.plist in Resources */,
 				F0D7072114A5896E00EC7633 /* Standins Sheet_default.png in Resources */,
+				F02646DB14A58B2D00C96B85 /* AFC.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3060,8 +3059,8 @@
 				F01D6AA014A55FDD00FE8B9A /* CC3OpenGLES11VertexArrays.m in Sources */,
 				F01D6AA114A55FDD00FE8B9A /* CC3Foundation.m in Sources */,
 				F01D6AA214A55FDD00FE8B9A /* CC3GLMatrix.m in Sources */,
-				F0D706C114A562F000EC7633 /* Tilemap_test.m in Sources */,
-				F0D706C414A5631100EC7633 /* Test_Scene.m in Sources */,
+				F0D706C114A562F000EC7633 /* Gameplay_Layer.mm in Sources */,
+				F0D706C414A5631100EC7633 /* Test_Scene.mm in Sources */,
 				F0D706E314A5659500EC7633 /* Main_Menu.mm in Sources */,
 				F0D706E414A5659500EC7633 /* MainMenuScene.mm in Sources */,
 				F0D706E514A5659500EC7633 /* OptionsScene.mm in Sources */,
@@ -3074,7 +3073,6 @@
 				F0D7070014A566BF00EC7633 /* GameManager.mm in Sources */,
 				F0D7070A14A568DB00EC7633 /* IID_Control_Layer.mm in Sources */,
 				F0D7070B14A568DB00EC7633 /* IID_Game_Scene.mm in Sources */,
-				F0D7070C14A568DB00EC7633 /* IID_Gameplay.mm in Sources */,
 				F0D7071714A5693900EC7633 /* AFC.mm in Sources */,
 				F0D7071814A5693900EC7633 /* IID_Game_Character.mm in Sources */,
 				F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */,

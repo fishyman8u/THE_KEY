@@ -11,6 +11,7 @@
 #import "CommonProtocols.h"
 //#import "Box2D_Test.h"
 #import "IID_Game_Scene.h"
+#import "Gameplay_Layer.h"
 
 @interface GameManager : NSObject
 {
@@ -23,7 +24,7 @@
 @property(readwrite) BOOL isMusicOn;
 @property(readwrite) BOOL isSoundEffectsOn;
 @property(readwrite) BOOL hasPlayerDied;
-
+@property(readonly) SceneTypes currentScene;
 +(GameManager *)sharedGameManager;
 
 -(void)runSceneWithID:(SceneTypes) sceneID;

@@ -15,16 +15,17 @@
 
 -(id) init
 {
-   gameplay = [IID_Gameplay node];
-    self.control_layer = [IID_Control_Layer node];
-   
+  Gameplay * gameplay = [Gameplay node];
+   // self.control_layer = [IID_Control_Layer node];
+    [self addChild:gameplay z:0 tag:kGamePlayLayer];
+   // [self addChild:control_layer];
     return self;
 }
 
 -(void) initializeSceneWithTileMapFile:(NSString*)tmxFile
 {
-        
-    [gameplay initializeTileMap:tmxFile];    
+    Gameplay *layer = [self getChildByTag:kGamePlayLayer];   
+    [layer initializeTileMap:tmxFile];    
    
     
 }

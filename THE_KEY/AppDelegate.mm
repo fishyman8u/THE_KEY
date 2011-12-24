@@ -14,6 +14,7 @@
 #import "RootViewController.h"
 #import "Test_Scene.h"
 #import "Root_Menu_Scene.h"
+#import "IID_Game_Scene.h"
 @implementation AppDelegate
 
 @synthesize window;

@@ -105,6 +105,7 @@
         [self initAnimations];
         //need to set default values
         //need to create dealloc method to cleanup
+        
     }
     return self;
     
