@@ -8,6 +8,7 @@
 
 #import "IID_Game_Object.h"
 #import "Box2D.h"
+#import "shortestPathStep.h"
 
 @interface IID_Game_Character : IID_Game_Object
 {
@@ -45,6 +46,10 @@
     CGPoint Target_point;
     
     //AI
+    
+    @private
+    NSMutableArray *spOpenSteps;
+	NSMutableArray *spClosedSteps;
    
 }
 @property(nonatomic, assign) int health;
@@ -54,4 +59,7 @@
 @property(nonatomic, assign) CGPoint destination;
 @property(nonatomic, assign) CGPoint Target_point;
 @property(nonatomic, assign) BOOL isPlayerControlled;
+@property(nonatomic, assign) id <GameplayLayerDelegate> delegate;
+
+-(void)moveToward:(CGPoint)target;
 @end

@@ -46,6 +46,7 @@ typedef enum{
     kStateProneToStanding,
     kStateRunning,
     kStateSpawning,
+    kStateCrawling,
     kStateTravelling,
     kStateNone    
 }CharacterStates;
@@ -128,12 +129,13 @@ typedef struct {
 }ai_target_info;
 
 @protocol GameplayLayerDelegate 
-
+-(NSArray *) walkableAdjacentTilesCoordForTileCoord:(CGPoint)tilecoord;
+-(CGPoint) tileCoordForPosition:(CGPoint)position;
 -(void) createObjectOfType:(GameObjectType)objectType 
 withHealth:(int) initialHealth
 atLocation:(CGPoint)spawnLocation
                                     withZValue:(int)Zvalue
-andTag:(int)tag;
+                    andTag:(int)tag andRotation:(float)rotation;
 /*
 -(void) createBodyAtLocation:(CGPoint)location 
 forSprite:(IID_Game_Character *)sprite friction:(float32)friction      

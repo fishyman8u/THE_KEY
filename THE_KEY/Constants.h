@@ -18,7 +18,7 @@
 //#define kRadarDishTagValue 10
 #define kP90_Weapon_Damage 30
 #define kLaser_Weapon_Damage 15
-#define kBulletSpeed 100
+#define kBulletSpeed 10.0f
 #define kBulletTimeToLive 10
 #define kDefaultFireRate 1
 #define PI 3.14159
@@ -26,6 +26,7 @@
 #define DegreeConvert 180 / PI
 #define PTM_RATIO 32.0
 #define kJoystick_velocity_scale 3.0
+#define kFireRate 200.0f
 //Damage will need to be defined some other way, plist?
 typedef struct {
     float degree, factor;

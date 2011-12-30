@@ -19,17 +19,19 @@
 #import "SneakyButton.h"
 #import "SneakyButtonSkinnedBase.h"
 #import "GLES-Render.h"
-
-@interface Gameplay_Layer : CCLayer
+#import "bullet.h"
+@interface Gameplay_Layer : CCLayer <GameplayLayerDelegate>
 {
     CCSpriteBatchNode *sceneSpriteBatchNode;
     b2World *world;
     GLESDebugDraw *debugDraw;
     BOOL Player_Exists;
+    CCNode *tile_map_scroll_node;
 }
 -(void) connectControlsWithRightJoystick:(SneakyJoystick*) rightJoystick 
                          andLeftJoystick:(SneakyJoystick*)leftJoystick
                           andProneButton:(SneakyButton*)proneButton
                          andCrouchButton:(SneakyButton*)crouchButton;
 -(void) initializeTileMap:(NSString *) tmxFile;
+- (NSArray *)walkableAdjacentTilesCoordForTileCoord:(CGPoint)tileCoord;
 @end

@@ -367,6 +367,9 @@
 		F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */; };
 		F03988DC14A5A0D000DA9C8F /* Joystick_base-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */; };
 		F03988DD14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */; };
+		F07E8E1214AA92E900A7F29D /* shortestPathStep.m in Sources */ = {isa = PBXBuildFile; fileRef = F07E8E1114AA92E900A7F29D /* shortestPathStep.m */; };
+		F07E8E1A14AD275300A7F29D /* bullet.mm in Sources */ = {isa = PBXBuildFile; fileRef = F07E8E1914AD275300A7F29D /* bullet.mm */; };
+		F07E8E1D14AD2D6800A7F29D /* bullet.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07E8E1C14AD2D6800A7F29D /* bullet.plist */; };
 		F0D706C414A5631100EC7633 /* Test_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0D706C314A5631100EC7633 /* Test_Scene.mm */; };
 		F0D706C814A563DE00EC7633 /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C614A563DE00EC7633 /* tileset.png */; };
 		F0D706CA14A564C700EC7633 /* test_level.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F0D706C914A564C700EC7633 /* test_level.tmx */; };
@@ -1193,6 +1196,11 @@
 		F03988D914A5A0D000DA9C8F /* Button_Pressed-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Pressed-01.png"; sourceTree = "<group>"; };
 		F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joystick_base-01.png"; sourceTree = "<group>"; };
 		F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joystick_Cross_Hairs-01.png"; sourceTree = "<group>"; };
+		F07E8E1014AA92E900A7F29D /* shortestPathStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortestPathStep.h; sourceTree = "<group>"; };
+		F07E8E1114AA92E900A7F29D /* shortestPathStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shortestPathStep.m; sourceTree = "<group>"; };
+		F07E8E1814AD275200A7F29D /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
+		F07E8E1914AD275300A7F29D /* bullet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = bullet.mm; sourceTree = "<group>"; };
+		F07E8E1C14AD2D6800A7F29D /* bullet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bullet.plist; sourceTree = "<group>"; };
 		F0D706BF14A562F000EC7633 /* Gameplay_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gameplay_Layer.h; sourceTree = "<group>"; };
 		F0D706C214A5631100EC7633 /* Test_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Scene.h; sourceTree = "<group>"; };
 		F0D706C314A5631100EC7633 /* Test_Scene.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Test_Scene.mm; sourceTree = "<group>"; };
@@ -1264,6 +1272,7 @@
 		F01D637014A55D7600FE8B9A = {
 			isa = PBXGroup;
 			children = (
+				F07E8E1C14AD2D6800A7F29D /* bullet.plist */,
 				F03988D814A5A0D000DA9C8F /* button_base-01.png */,
 				F03988D914A5A0D000DA9C8F /* Button_Pressed-01.png */,
 				F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */,
@@ -2622,6 +2631,8 @@
 			children = (
 				F0D7070214A566E700EC7633 /* CommonProtocols.h */,
 				F0D7070314A566E700EC7633 /* Constants.h */,
+				F07E8E1014AA92E900A7F29D /* shortestPathStep.h */,
+				F07E8E1114AA92E900A7F29D /* shortestPathStep.m */,
 			);
 			name = "Constants and Protocols";
 			sourceTree = "<group>";
@@ -2637,6 +2648,8 @@
 		F0D7070E14A5690600EC7633 /* 2d */ = {
 			isa = PBXGroup;
 			children = (
+				F07E8E1814AD275200A7F29D /* bullet.h */,
+				F07E8E1914AD275300A7F29D /* bullet.mm */,
 				F0D7070F14A5693800EC7633 /* AFC.h */,
 				F0D7071014A5693800EC7633 /* AFC.mm */,
 				F0D7071114A5693800EC7633 /* IID_Game_Character.h */,
@@ -2700,6 +2713,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07E8E1D14AD2D6800A7F29D /* bullet.plist in Resources */,
 				F0D706F814A5665600EC7633 /* button_base-01.png in Resources */,
 				F0D706F914A5665600EC7633 /* Button_Pressed-01.png in Resources */,
 				F03988DC14A5A0D000DA9C8F /* Joystick_base-01.png in Resources */,
@@ -3089,6 +3103,8 @@
 				F0D7071914A5693900EC7633 /* IID_Game_Object.mm in Sources */,
 				F0D7071A14A5693900EC7633 /* IID_Generic_Soldier.mm in Sources */,
 				F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */,
+				F07E8E1214AA92E900A7F29D /* shortestPathStep.m in Sources */,
+				F07E8E1A14AD275300A7F29D /* bullet.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

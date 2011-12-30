@@ -39,6 +39,7 @@
     BOOL isRunning;
     BOOL isOutofAmmo;
     BOOL isUnderRecoil;
+    BOOL firing;
     //Enums
     WeaponType weapon;//
     
@@ -77,6 +78,15 @@
     
     //physics variables
    // b2Vec2 *velocity;
+    ccTime timeSinceLastShot;
+    ccTime button_lock;
+    ccTime left_overtime;
+    int step;
+    //Scrolling Var
+    CGPoint old_pos;
+    
+    BOOL prone_but;
+    BOOL crouch_but;
 }
 @property(nonatomic, retain) CCAnimation *standing;
 @property(nonatomic, retain) CCAnimation *Standing_to_crouching;
@@ -106,7 +116,7 @@
 @property(nonatomic, retain) SneakyButton *cover;
 @property(nonatomic, retain) SneakyJoystick *left_Joystick;
 @property(nonatomic, retain) SneakyJoystick *right_Joystick;
-@property(nonatomic, assign) id <GameplayLayerDelegate> delegate;
+
 @property(nonatomic, readwrite) BOOL canShoot;
 @property(nonatomic, readwrite) BOOL decision_needed;
 @property(nonatomic, readwrite) BOOL move;
@@ -114,6 +124,12 @@
 @property(nonatomic, readwrite) BOOL isOutofAmmo;
 @property(nonatomic, readwrite) BOOL isUnderRecoil;
 @property(nonatomic, readwrite) WeaponType weapon;
-
+@property(nonatomic, readwrite) CGPoint old_pos;
 //@property(nonatomic, readwrite) b2Vec2 
+@property(nonatomic, readwrite) BOOL isProne;
+@property(nonatomic, readwrite) BOOL isCrouched;
+@property(nonatomic, readwrite) BOOL isRunning;
+@property(nonatomic, readwrite) ccTime timeSinceLastShot;
+@property(nonatomic, readwrite) BOOL firing;
+@property(nonatomic, readwrite) BOOL fireIfAble;
 @end

@@ -28,6 +28,14 @@
     }
     //tie the controls to the appropriate unit
 }
+-(BOOL)isValidTileCoord:(CGPoint)coord
+{
+    return TRUE;
+}
+-(BOOL)isWallAtTileCoord:(CGPoint)coord
+{
+    return FALSE;
+}
 -(void) adjustLayer//relies on Gamemanager for level size!
 {
     
@@ -36,22 +44,42 @@
     IID_Generic_Soldier *player = (IID_Generic_Soldier *)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
     float x_pos = player.position.x;
     float y_pos = player.position.y;
-    CGSize screenSize = [CCDirector sharedDirector].winSize;
-    float halfOfTheScreen = screenSize.width/2.0f;
-    CGSize levelSize = [[GameManager sharedGameManager] getDimensionsOfCurrentScene];
-    if ((x_pos > halfOfTheScreen) && 
-        (x_pos < (levelSize.width - halfOfTheScreen))) {
-        // Background should scroll
-        float newXPosition = halfOfTheScreen - x_pos; // 7
-        [self setPosition:ccp(newXPosition,self.position.y)]; // 8
-    }
-    if ((y_pos > halfOfTheScreen) && 
-        (y_pos < (levelSize.width - halfOfTheScreen))) {
-        // Background should scroll
-        float newXPosition = halfOfTheScreen - y_pos; // 7
-        [self setPosition:ccp(self.position.x,newXPosition)]; // 8
-    }
+     CGSize screenSize = [CCDirector sharedDirector].winSize;
+    float halfOfTheScreenX = screenSize.width/2.0f;
+    float halfOfTheScreenY =screenSize.height/2.0f;
     
+    if(player.position.x != player.old_pos.x)
+    {
+      //  CCLOG(@"Setting X!");
+        float newXPosition = halfOfTheScreenX - x_pos; // 7
+        [self setPosition:ccp(newXPosition,self.position.y)];
+    }
+    if(player.position.y != player.old_pos.y)
+    {
+       // CCLOG(@"Setting Y!");
+        float newXPosition = halfOfTheScreenY - y_pos; // 7
+        [self setPosition:ccp(self.position.x,newXPosition)];
+    }
+   // CGSize screenSize = [CCDirector sharedDirector].winSize;
+   // float halfOfTheScreenX = screenSize.width/2.0f;
+    //float halfOfTheScreenY =screenSize.height/2.0f;
+   /* CGSize levelSize = [[GameManager sharedGameManager] getDimensionsOfCurrentScene];
+    CCLOG(@"Scrolling vars, x_pos: %f, y_pos: %f, screenSize.width: %f, screenSize.height: %f, halfOfScreen: %f, HS.width: %f, HS.height: %f", x_pos, y_pos, screenSize.height, screenSize.width, halfOfTheScreenX, levelSize.width, levelSize.height);
+    if ((x_pos > halfOfTheScreenX) && 
+        (x_pos < (levelSize.width - halfOfTheScreenX))) {
+        // Background should scroll
+        CCLOG(@"Setting X!");
+        float newXPosition = halfOfTheScreenX - x_pos; // 7
+        [tile_map_scroll_node setPosition:ccp(newXPosition,self.position.y)]; // 8
+    }
+    if ((y_pos > halfOfTheScreenY) && 
+        (y_pos < (levelSize.width - halfOfTheScreenY))) {
+        // Background should scroll
+        CCLOG(@"Setting Y!");
+        float newXPosition = halfOfTheScreenY - y_pos; // 7
+        [tile_map_scroll_node setPosition:ccp(self.position.x,newXPosition)]; // 8
+    }
+    */
 }
 
 -(void) setupWorld{
@@ -94,7 +122,7 @@
     
     body->CreateFixture(&fixtureDef);   
 }
--(void)createObjectOfType:(GameObjectType)objectType withHealth:(int)initialHealth atLocation:(CGPoint)spawnLocation withZValue:(int)Zvalue andTag:(int)tag
+-(void)createObjectOfType:(GameObjectType)objectType withHealth:(int)initialHealth atLocation:(CGPoint)spawnLocation withZValue:(int)Zvalue andTag:(int)tag andRotation:(float)rotation
 {
     if(tag == kAFC_Player_TagValue)
     {
@@ -109,10 +137,42 @@
             
             //set weapons, ammo, etc
             
-            
+            [player setDelegate:self];
             [sceneSpriteBatchNode addChild:player z:kAFC_Player_Z_Value tag:kAFC_Player_TagValue];
             [player release];
+            return;
         }
+    }
+    switch (objectType) {
+        case kAFC:
+        {
+            
+        
+            break;
+        }
+        case kBullet:
+        {
+            bullet *bullet1 = [[bullet alloc] initWithSpriteFrameName:@"bullet1.png"];
+            [bullet1 setHealth:initialHealth];
+            [self createBodyAtLocation:spawnLocation forSprite:bullet1 friction:1.0 restitution:1.0 density:1.0 isBox:YES];
+            const float rotation_factor1 = rotation * RadianConvert;
+            [bullet1 setRotation:rotation];
+            b2Vec2 vel;
+            const b2Vec2 pos = bullet1.body->GetPosition();
+            
+            vel.x = kBulletSpeed * sinf(rotation *RadianConvert);
+            vel.y = kBulletSpeed * cosf(rotation *RadianConvert);
+            bullet1.body->SetLinearVelocity(vel);
+            bullet1.body->SetTransform(pos, rotation_factor1);
+            //bullet1.body->SetTransform(pos, rotation_factor1);
+            //[bullet1 setRotationTransform:rotation_factor1 andPosition:pos];
+            [sceneSpriteBatchNode addChild:bullet1];
+            return;
+            break;
+            
+        }
+        default:
+            break;
     }
 }
 -(void) initializeTileMap:(NSString *)tmxFile
@@ -141,7 +201,7 @@
                 location.y = y;
                 CCLOG(@"Creating Player!");
                 if([name isEqualToString: @"AFC"]) {
-                    [self createObjectOfType:kAFC withHealth:100 atLocation:location withZValue:kAFC_Player_Z_Value andTag:kAFC_Player_TagValue];
+                    [self createObjectOfType:kAFC withHealth:100 atLocation:location withZValue:kAFC_Player_Z_Value andTag:kAFC_Player_TagValue andRotation:0.0f];
                     CCLOG(@"AFC Player created at x: %f and y: %f", location.x, location.y);
                     AFC * player = (AFC*)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
                     [player setIsPlayerControlled:YES];
@@ -168,7 +228,7 @@
         }
     }
     
-    [self addChild:map];
+    [tile_map_scroll_node addChild:map];
    
 }
 -(id) init
@@ -180,6 +240,8 @@
         sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"Standins Sheet_default.png"];
         [self setupWorld];
         [self addChild:sceneSpriteBatchNode z:100];
+        tile_map_scroll_node = [CCNode node];
+        [self addChild:tile_map_scroll_node];
         if([GameManager sharedGameManager].currentScene == kGameLevel1){ 
             [self initializeTileMap:@"test_level.tmx"];}
         else if([GameManager sharedGameManager].currentScene == kGameLevel2)
@@ -219,10 +281,44 @@
      }   
      if(Player_Exists)
      {
+         //CCLOG(@"Adjusting layer!");
          [self adjustLayer];
      }
     
 }
-
+-(CGPoint) tileCoordForPosition:(CGPoint)position
+{
+    return position;
+}
+- (NSArray *)walkableAdjacentTilesCoordForTileCoord:(CGPoint)tileCoord
+{
+	NSMutableArray *tmp = [NSMutableArray arrayWithCapacity:4];
+    
+	// Top
+	CGPoint p = CGPointMake(tileCoord.x, tileCoord.y - 1);
+	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+		[tmp addObject:[NSValue valueWithCGPoint:p]];
+	}
+    
+	// Left
+	p = CGPointMake(tileCoord.x - 1, tileCoord.y);
+	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+		[tmp addObject:[NSValue valueWithCGPoint:p]];
+	}
+    
+	// Bottom
+	p = CGPointMake(tileCoord.x, tileCoord.y + 1);
+	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+		[tmp addObject:[NSValue valueWithCGPoint:p]];
+	}
+    
+	// Right
+	p = CGPointMake(tileCoord.x + 1, tileCoord.y);
+	if ([self isValidTileCoord:p] && ![self isWallAtTileCoord:p]) {
+		[tmp addObject:[NSValue valueWithCGPoint:p]];
+	}
+    
+	return [NSArray arrayWithArray:tmp];
+}
 
 @end
