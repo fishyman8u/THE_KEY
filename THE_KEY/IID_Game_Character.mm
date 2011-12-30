@@ -26,6 +26,7 @@
 @synthesize spOpenSteps;
 @synthesize spClosedSteps;
 @synthesize delegate;
+@synthesize team;
 -(id) init
 {
     

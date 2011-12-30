@@ -128,7 +128,7 @@
                 CGPoint pos = ccp(self.position.x + x_plus, self.position.y + y_plus);
                 CCLOG(@"Creating bullet with rotation: %f!", self.rotation);
                 
-            [delegate createObjectOfType:kBullet withHealth:1.0f atLocation:pos withZValue:1000 andTag:15 andRotation:self.rotation];
+            [delegate createObjectOfType:kBullet withHealth:1.0f atLocation:pos withZValue:1000 andTag:15 andRotation:self.rotation andTeam:1];
         //create bullet here
         timeSinceLastShot = 0.0f;
             

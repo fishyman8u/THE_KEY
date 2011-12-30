@@ -17,7 +17,7 @@
     
     //counters
     int Health;
-   
+    int team;
     //physics vars
     b2Vec2 velocity;
     b2Body *body;
@@ -60,6 +60,6 @@
 @property(nonatomic, assign) CGPoint Target_point;
 @property(nonatomic, assign) BOOL isPlayerControlled;
 @property(nonatomic, assign) id <GameplayLayerDelegate> delegate;
-
+@property(nonatomic) int team;
 -(void)moveToward:(CGPoint)target;
 @end

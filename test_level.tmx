@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="15" height="15" tilewidth="64" tileheight="64">
+<map version="1.0" orientation="orthogonal" width="35" height="35" tilewidth="64" tileheight="64">
  <tileset firstgid="1" name="tileset" tilewidth="64" tileheight="64" spacing="2" margin="1">
   <image source="tileset.png" width="512" height="512"/>
  </tileset>
- <layer name="Map" width="15" height="15">
+ <layer name="Map" width="35" height="35">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NiYGBgIhML4cCU6CVGPycaJkU/ul50MyjRi08/JXrxhRUh/bTWS27aGcUIDAAL7at+hAMAAA==
+   H4sIAAAAAAAAA+3SMQoAIBADweM6W///WPuAlrkIW0y/kHRVdYh9kdQy0bPEZI+2aFNSi7MnqeX1XXfPby2ujQAAAAAAeQ7z8MVDJBMAAA==
   </data>
  </layer>
- <objectgroup name="Objects" width="15" height="15">
-  <object name="Player1" type="AFC" x="579" y="803" width="56" height="44"/>
+ <objectgroup name="Objects" width="35" height="35">
+  <object name="Player1" type="AFC" x="579" y="803" width="56" height="44">
+   <properties>
+    <property name="Team" value="1"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

@@ -122,7 +122,7 @@
     
     body->CreateFixture(&fixtureDef);   
 }
--(void)createObjectOfType:(GameObjectType)objectType withHealth:(int)initialHealth atLocation:(CGPoint)spawnLocation withZValue:(int)Zvalue andTag:(int)tag andRotation:(float)rotation
+-(void)createObjectOfType:(GameObjectType)objectType withHealth:(int)initialHealth atLocation:(CGPoint)spawnLocation withZValue:(int)Zvalue andTag:(int)tag andRotation:(float)rotation andTeam:(int)team
 {
     if(tag == kAFC_Player_TagValue)
     {
@@ -195,13 +195,13 @@
                 int x,y;
                 x = [[units valueForKey:@"x"]intValue];
                 y = [[units valueForKey:@"y"] intValue];
-                
+                int team = [[units valueForKey:@"Team"] intValue];
                 CGPoint location;
                 location.x = x;
                 location.y = y;
                 CCLOG(@"Creating Player!");
                 if([name isEqualToString: @"AFC"]) {
-                    [self createObjectOfType:kAFC withHealth:100 atLocation:location withZValue:kAFC_Player_Z_Value andTag:kAFC_Player_TagValue andRotation:0.0f];
+                    [self createObjectOfType:kAFC withHealth:100 atLocation:location withZValue:kAFC_Player_Z_Value andTag:kAFC_Player_TagValue andRotation:0.0f andTeam:team];
                     CCLOG(@"AFC Player created at x: %f and y: %f", location.x, location.y);
                     AFC * player = (AFC*)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
                     [player setIsPlayerControlled:YES];

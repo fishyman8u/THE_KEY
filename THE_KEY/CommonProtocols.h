@@ -135,7 +135,7 @@ typedef struct {
 withHealth:(int) initialHealth
 atLocation:(CGPoint)spawnLocation
                                     withZValue:(int)Zvalue
-                    andTag:(int)tag andRotation:(float)rotation;
+                    andTag:(int)tag andRotation:(float)rotation andTeam:(int)team;
 /*
 -(void) createBodyAtLocation:(CGPoint)location 
 forSprite:(IID_Game_Character *)sprite friction:(float32)friction      
