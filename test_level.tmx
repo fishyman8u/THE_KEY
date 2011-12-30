@@ -14,5 +14,10 @@
     <property name="Team" value="1"/>
    </properties>
   </object>
+  <object name="AI_1" type="AFC" x="1370" y="592" width="54" height="50">
+   <properties>
+    <property name="Team" value="2"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

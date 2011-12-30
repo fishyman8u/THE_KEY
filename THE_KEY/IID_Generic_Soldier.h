@@ -27,6 +27,7 @@
     
     //BOOLs
     BOOL canShoot;//set to block firing when crawling, reloading, etc
+    BOOL isHit;
     BOOL isUnderAttack;//used by decision tree, set in physics update
     BOOL enemySighted;//used by decision tree, set in physics update
     BOOL decision_needed;//used by decision tree, set in physics update
@@ -74,6 +75,7 @@
     BOOL pathLoops; //used for determining where the path is a looping path (for a patrol)
     BOOL fireIfAble;
     BOOL move;
+    BOOL enemySpotted;
     CGPoint currentDestination;
     
     //physics variables

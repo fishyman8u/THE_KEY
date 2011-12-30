@@ -54,8 +54,79 @@
 //apply movement joystick
 //apply shooting joystick
 
+bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
+{
+    b2ContactEdge *edge = body->GetContactList();
+    while(edge)
+    {
+        b2Contact *contact = edge->contact;
+        if(contact->IsTouching())
+        {
+            b2Fixture *fixtureA = contact->GetFixtureA();
+            b2Fixture *fixtureB = contact->GetFixtureB();
+            b2Body *bodyA = fixtureA->GetBody();
+            b2Body *bodyB = fixtureB->GetBody();
+            IID_Game_Character * spriteA = (IID_Game_Character *) bodyA->GetUserData();
+            IID_Game_Character * spriteB = (IID_Game_Character *) bodyB->GetUserData();
+            if ((spriteA != NULL && 
+                 spriteA.gameObjectType == objectType) ||
+                (spriteB != NULL && 
+                 spriteB.gameObjectType == objectType)) {
+                    if(spriteA.gameObjectType == kBullet)
+                    {
+                        [spriteA changeState:kStateDead];
+                    }
+                    if(spriteB.gameObjectType == kBullet)
+                    {
+                        [spriteB changeState:kStateDead];
+                    }
+                       
+                    
+                    return true;
+                }
+            edge = edge->next;
+        }
+    }
+    return false;
+}
 -(void) updateAIControlled:(ccTime)deltaTime
 {
+    //check if hit (and thus under attack)
+    isHit = isBodyCollidingWithObjectType(body, kBullet);
+   // enemySighted = 
+    if(isHit)
+    {
+        if(!isUnderAttack){
+        isUnderAttack = YES;
+        decision_needed = YES;
+        }
+        self.health = self.health - 10.0f;
+        //play hit anim
+        //play hit sound
+        if(self.health <= 0.0f)
+        {
+            [self changeState:kStateDead];
+            return;
+        }
+    }
+    if(!move)
+    {
+        decision_needed = YES;
+    }
+    if(move && !isUnderAttack && !enemySighted)
+    {
+        decision_needed = NO; //just continue moving
+    }
+    
+    
+    if(decision_needed)
+    {
+        //main decision tree
+    }
+    
+    
+    
+    
     
 }
 -(void) applyMovementJoystick:(SneakyJoystick*)aJoysick forTimeDelta:(float) deltaTime

@@ -138,6 +138,7 @@
             //set weapons, ammo, etc
             
             [player setDelegate:self];
+            [player setTeam:team];
             [sceneSpriteBatchNode addChild:player z:kAFC_Player_Z_Value tag:kAFC_Player_TagValue];
             [player release];
             return;
@@ -146,8 +147,13 @@
     switch (objectType) {
         case kAFC:
         {
-            
-        
+            AFC *player = [[AFC alloc] initWithSpriteFrameName:@"AFC1.png"];
+            [player setHealth:initialHealth];
+            [player setPosition:spawnLocation];
+            [self createBodyAtLocation:spawnLocation forSprite:player friction:1.0 restitution:1.0 density:1.0 isBox:YES];
+            [player setDelegate:self];
+            [player setTeam:team];
+            [sceneSpriteBatchNode addChild:player];
             break;
         }
         case kBullet:
@@ -217,7 +223,17 @@
             if([name isEqualToString: @"AFC"])
             {
                 CCLOG(@"Creating AFC");
-                //create AI afc object
+                int x,y;
+                x = [[units valueForKey:@"x"]intValue];
+                y = [[units valueForKey:@"y"] intValue];
+                int team = [[units valueForKey:@"Team"] intValue];
+                CGPoint location;
+                location.x = x;
+                location.y = y;
+                [self createObjectOfType:kAFC withHealth:100 atLocation:location withZValue:kAFC_Player_Z_Value andTag:100 andRotation:0.0f andTeam:team];
+                CCLOG(@"AFC Player created at x: %f and y: %f", location.x, location.y);
+               // AFC * player = (AFC*)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
+                //[player setIsPlayerControlled:YES];
             }
             if(name == @"Dusan")
             {
