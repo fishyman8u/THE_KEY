@@ -20,6 +20,7 @@
     int team;
     //physics vars
     b2Vec2 velocity;
+    b2Vec2 angular_velocity;
     b2Body *body;
     //enums
     CharacterStates characterState;
@@ -52,7 +53,7 @@
 	NSMutableArray *spClosedSteps;
    
 }
-@property(nonatomic, assign) int health;
+@property(nonatomic, assign) int Health;
 @property (assign) b2Body *body;
 @property(nonatomic, assign) CharacterStates characterState;
 @property(assign) b2Vec2 velocity;

@@ -56,12 +56,16 @@
 
 bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
 {
+    
     b2ContactEdge *edge = body->GetContactList();
     while(edge)
     {
+        
         b2Contact *contact = edge->contact;
+        
         if(contact->IsTouching())
         {
+            CCLOG(@"testing for collision!");
             b2Fixture *fixtureA = contact->GetFixtureA();
             b2Fixture *fixtureB = contact->GetFixtureB();
             b2Body *bodyA = fixtureA->GetBody();
@@ -84,8 +88,9 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
                     
                     return true;
                 }
-            edge = edge->next;
+            
         }
+        edge = edge->next;
     }
     return false;
 }
@@ -100,10 +105,10 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
         isUnderAttack = YES;
         decision_needed = YES;
         }
-        self.health = self.health - 10.0f;
+        self.Health = self.Health - 10.0f;
         //play hit anim
         //play hit sound
-        if(self.health <= 0.0f)
+        if(self.Health <= 0.0f)
         {
             [self changeState:kStateDead];
             return;
@@ -121,6 +126,30 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
     
     if(decision_needed)
     {
+        if(isUnderAttack || enemySighted)
+        {
+            //find attacker(s)
+            
+            //find cover
+            
+            //move to cover and return fire or run away
+        }
+        
+      //determine a behavoir 
+        //autonomous behavoirs:
+            //patrol
+            //wander
+            //guard
+            //hunt
+            //flee
+            //hide
+       //coordinated behavoirs
+            //attack
+            //defend
+            //protect/guard
+            //ambush
+            //patrol
+            //retreat
         //main decision tree
     }
     
@@ -389,9 +418,16 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
         }
         else
         {
+            if([self numberOfRunningActions] == 0)
+            {
+                self.visible =NO;
+                [self removeFromParentAndCleanup:YES];
+            }
             return;
         }
     }
+    
+    body->SetAngularVelocity(0.0f);
     if(isPlayerControlled)
     [self updatePlayerControlled:deltaTime];
     else
@@ -654,7 +690,9 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
         case kStateSpawning:
             action = [CCAnimate actionWithAnimation:standing restoreOriginalFrame:NO];
         case kStateDead:
+            
             CCLOG(@"Need death anim!");
+            
             break;
         default:
             CCLOG(@"State not found!");

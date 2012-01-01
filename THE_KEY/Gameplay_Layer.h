@@ -27,6 +27,13 @@
     GLESDebugDraw *debugDraw;
     BOOL Player_Exists;
     CCNode *tile_map_scroll_node;
+    int map_size_x;
+    int map_size_y;
+    int tile_size;
+    CCTMXTiledMap *map;
+    CCTMXLayer *tiles;
+    b2ContactListener *collision_listener;
+    
 }
 -(void) connectControlsWithRightJoystick:(SneakyJoystick*) rightJoystick 
                          andLeftJoystick:(SneakyJoystick*)leftJoystick

@@ -14,6 +14,7 @@
                           andProneButton:(SneakyButton*)proneButton
                          andCrouchButton:(SneakyButton*)crouchButton
 {
+    
     AFC * player = (AFC*) [sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
     if(player !=nil){
     [player setLeft_Joystick:leftJoystick];
@@ -28,12 +29,37 @@
     }
     //tie the controls to the appropriate unit
 }
+-(CGPoint) convertCGPOINTToTileMapCoord:(CGPoint)coord
+{
+    CGPoint tilemap_coord;
+    tilemap_coord.x = roundf(coord.x/tile_size);
+    tilemap_coord.y = roundf(coord.y/tile_size);
+    CCLOG(@"Coverted x: %f, y: %f to tilemap coords x: %f, y:%f", coord.x, coord.y, tilemap_coord.x, tilemap_coord.y);
+    return tilemap_coord;
+}
+-(CGPoint) covertTilemapCoordToCGPoint:(CGPoint)tilemap_coord
+{
+    CGPoint coord;
+    coord.x = tilemap_coord.x * tile_size;
+    coord.y = tilemap_coord.y * tile_size;
+    CCLOG(@"Coverted x: %f, y: %f from tilemap coords x: %f, y:%f", coord.x, coord.y, tilemap_coord.x, tilemap_coord.y);
+    return coord;
+}
 -(BOOL)isValidTileCoord:(CGPoint)coord
 {
+    if((coord.x > 0) && (coord.x < map_size_x))
     return TRUE;
+    else
+    {
+        return false;
+    }
 }
+//checks if tile is passable
 -(BOOL)isWallAtTileCoord:(CGPoint)coord
 {
+   // CCSprite *sprite = [tiles tileAt:coord];
+   int tileGID =  [tiles tileGIDAt:coord]; 
+    //test GID against passable/impassible tiles
     return FALSE;
 }
 -(void) adjustLayer//relies on Gamemanager for level size!
@@ -85,8 +111,13 @@
 -(void) setupWorld{
     //init the physics world
     b2Vec2 gravity = b2Vec2(0, 0);
+    
     bool doSleep = FALSE;
     world = new b2World(gravity, doSleep);
+    
+   // collision_listener = new b2ContactListener;
+   // world->SetContactListener(collision_listener);
+   // collision_listener->
 }
 -(void) createBodyAtLocation:(CGPoint)location 
                    forSprite:(IID_Game_Character *)sprite friction:(float32)friction      
@@ -99,7 +130,7 @@
                               location.y/PTM_RATIO);
     bodyDef.allowSleep = false;
     b2Body *body = world->CreateBody(&bodyDef);
-    
+    body->SetLinearDamping(0.1f);
     body->SetUserData(sprite);
     sprite.body = body;
     
@@ -183,7 +214,12 @@
 }
 -(void) initializeTileMap:(NSString *)tmxFile
 {
-    CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:tmxFile];
+    map = [CCTMXTiledMap tiledMapWithTMXFile:tmxFile];
+    tiles = [map layerNamed:@"map"];
+    NSMutableDictionary *map_properties = [[NSMutableDictionary alloc] initWithDictionary:[map properties]];
+    map_size_x = [[map_properties valueForKey:@"width"] intValue];
+    map_size_y = [[map_properties valueForKey:@"height"] intValue];
+    tile_size =  [[map_properties valueForKey:@"tilewidth"] intValue];
     NSMutableArray * object_layers = [[NSMutableArray alloc] initWithArray:[map objectGroups]];
     
     for(CCTMXObjectGroup *object_layer in object_layers)
@@ -270,17 +306,18 @@
         }
        // CGSize screen = [CCDirector sharedDirector].winSize;
         [self schedule:@selector(update:)];
+        tile_size = 64;
+        map_size_x = 0;
+        map_size_y = 0;
     }
     return self;
 }
+//void BeginContact
 -(void)update:(ccTime)deltaTime
 {
    // CCLOG(@"Updating!");
     CCArray *listOfGameObjects = [sceneSpriteBatchNode children];
-    for(IID_Game_Character *character in listOfGameObjects)
-    {
-        [character updateStateWithDeltaTime:deltaTime andListofGameObjects:listOfGameObjects];
-    }
+    
      int32 velocityIterations = 3;
      int32 positionIterations = 2;
      world->Step(deltaTime, velocityIterations, positionIterations);
@@ -294,7 +331,11 @@
     // sprite.rotation = CC_RADIANS_TO_DEGREES(b->GetAngle());
        // CCLOG(@"Sprite Rotation: %f", sprite.rotation);
      }        
-     }   
+     }
+    for(IID_Game_Character *character in listOfGameObjects)
+    {
+        [character updateStateWithDeltaTime:deltaTime andListofGameObjects:listOfGameObjects];
+    }
      if(Player_Exists)
      {
          //CCLOG(@"Adjusting layer!");

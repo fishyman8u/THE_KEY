@@ -16,7 +16,7 @@
 - (int)costToMoveFromStep:(shortestPathStep *)fromStep toAdjacentStep:(shortestPathStep *)toStep;
 @end
 @implementation IID_Game_Character
-@synthesize health;
+@synthesize Health;
 @synthesize body;
 @synthesize characterState;
 @synthesize velocity;
@@ -38,7 +38,7 @@
         //self.velocity = b2Vec2(0.0f, 0.0f);
         self.destination = ccp(0.0f, 0.0f);
         self.Target_point = ccp(0.0f, 0.0f);
-        self.health = 100;
+        self.Health = 100;
         self.isPlayerControlled = FALSE;
         self.spOpenSteps = nil;
         self.spClosedSteps = nil;
