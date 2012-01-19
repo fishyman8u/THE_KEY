@@ -51,7 +51,8 @@
     @private
     NSMutableArray *spOpenSteps;
 	NSMutableArray *spClosedSteps;
-   
+    float sightDistance;
+    
 }
 @property(nonatomic, assign) int Health;
 @property (assign) b2Body *body;
@@ -62,5 +63,6 @@
 @property(nonatomic, assign) BOOL isPlayerControlled;
 @property(nonatomic, assign) id <GameplayLayerDelegate> delegate;
 @property(nonatomic) int team;
+@property(nonatomic) float sightDistance;
 -(void)moveToward:(CGPoint)target;
 @end

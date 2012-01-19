@@ -51,6 +51,7 @@
 @synthesize timeSinceLastShot;
 @synthesize firing;
 @synthesize fireIfAble;
+@synthesize enemies_sighted;
 //apply movement joystick
 //apply shooting joystick
 
@@ -94,7 +95,7 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
     }
     return false;
 }
--(void) updateAIControlled:(ccTime)deltaTime
+-(void) updateAIControlled:(ccTime)deltaTime andListOfGameObjects:(CCArray *)gameObjects
 {
     //check if hit (and thus under attack)
     isHit = isBodyCollidingWithObjectType(body, kBullet);
@@ -129,11 +130,24 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
         if(isUnderAttack || enemySighted)
         {
             //find attacker(s)
+            int enemy_count = 0;
+            for (IID_Game_Character *character in gameObjects)
+            {
+                //develop a calculation comparing position differences to sight distance, filter for team
+                //also check for allied units/formation/etc
+                
+            }
             
-            //find cover
+            ////check for open squares with cover in a given range
             
-            //move to cover and return fire or run away
+            //check relative strength and decide whether to move to cover and return fire or run away
+            //IDEA, have a process that develops and array of numbers that records relative strength known for each team, divide it up so it only does a small part of the calc each frame, and fully runs every 10sec or so (maybe use a buffer like system that swaps??); also could do something similar for cover (have integer array constructed at map load)
+            
+        /////^^units could then update based on the persistent array info 
+            
+        //select a destination and set the unit to move, call the pathfinder method to fill a waypoints array
         }
+        //if no threat then a behavior needs to be selected, maybe using the help of the relative strength array and an AI commander that sets priorities based on a map variable that selects the AI strategy, or calculates it based on goals and relative strength map. Maybe map "triggers" could be used to adjust AI strategy.
         
       //determine a behavoir 
         //autonomous behavoirs:
@@ -432,7 +446,7 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
     [self updatePlayerControlled:deltaTime];
     else
     {
-        [self updateAIControlled:deltaTime];
+        [self updateAIControlled:deltaTime andListOfGameObjects:listOfGameObjects];
     }
     //[self applyMovementJoystick:left_Joystick forTimeDelta:deltaTime];
     //Check collisions? (at this point, no, will be done in physics sim update)
@@ -727,6 +741,8 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
         timeSinceLastShot = 0.0f;
         left_overtime = 0.0f;
         button_lock = 0.0f;
+        enemies_sighted = [[CCArray alloc] initWithCapacity:20];
+      //  sight_distance = 100.0f;
         //need to set default values
         //need to create dealloc method to cleanup
         

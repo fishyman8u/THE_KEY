@@ -367,6 +367,8 @@
 		F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F02646DF14A59E0500C96B85 /* Gameplay_Layer.mm */; };
 		F03988DC14A5A0D000DA9C8F /* Joystick_base-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */; };
 		F03988DD14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */; };
+		F058107614C7DFFC00B0B4E4 /* StarNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = F058107514C7DFFC00B0B4E4 /* StarNode.mm */; };
+		F058107914C88A8000B0B4E4 /* StarNodePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = F058107814C88A8000B0B4E4 /* StarNodePath.mm */; };
 		F07E8E1214AA92E900A7F29D /* shortestPathStep.m in Sources */ = {isa = PBXBuildFile; fileRef = F07E8E1114AA92E900A7F29D /* shortestPathStep.m */; };
 		F07E8E1A14AD275300A7F29D /* bullet.mm in Sources */ = {isa = PBXBuildFile; fileRef = F07E8E1914AD275300A7F29D /* bullet.mm */; };
 		F07E8E1D14AD2D6800A7F29D /* bullet.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07E8E1C14AD2D6800A7F29D /* bullet.plist */; };
@@ -1196,6 +1198,10 @@
 		F03988D914A5A0D000DA9C8F /* Button_Pressed-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button_Pressed-01.png"; sourceTree = "<group>"; };
 		F03988DA14A5A0D000DA9C8F /* Joystick_base-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joystick_base-01.png"; sourceTree = "<group>"; };
 		F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joystick_Cross_Hairs-01.png"; sourceTree = "<group>"; };
+		F058107414C7DFFC00B0B4E4 /* StarNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarNode.h; sourceTree = "<group>"; };
+		F058107514C7DFFC00B0B4E4 /* StarNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StarNode.mm; sourceTree = "<group>"; };
+		F058107714C88A8000B0B4E4 /* StarNodePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarNodePath.h; sourceTree = "<group>"; };
+		F058107814C88A8000B0B4E4 /* StarNodePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StarNodePath.mm; sourceTree = "<group>"; };
 		F07E8E1014AA92E900A7F29D /* shortestPathStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortestPathStep.h; sourceTree = "<group>"; };
 		F07E8E1114AA92E900A7F29D /* shortestPathStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shortestPathStep.m; sourceTree = "<group>"; };
 		F07E8E1814AD275200A7F29D /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
@@ -1312,6 +1318,7 @@
 		F01D638F14A55D7600FE8B9A /* THE_KEY */ = {
 			isa = PBXGroup;
 			children = (
+				F058107114C7DFCD00B0B4E4 /* AI */,
 				F0D7070D14A568FC00EC7633 /* Objects */,
 				F0D7070114A566C900EC7633 /* Constants and Protocols */,
 				F0D706FD14A566A300EC7633 /* Singleton Managers */,
@@ -2487,6 +2494,25 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		F058107114C7DFCD00B0B4E4 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				F058107314C7DFDB00B0B4E4 /* Pathfinding */,
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
+		F058107314C7DFDB00B0B4E4 /* Pathfinding */ = {
+			isa = PBXGroup;
+			children = (
+				F058107414C7DFFC00B0B4E4 /* StarNode.h */,
+				F058107514C7DFFC00B0B4E4 /* StarNode.mm */,
+				F058107714C88A8000B0B4E4 /* StarNodePath.h */,
+				F058107814C88A8000B0B4E4 /* StarNodePath.mm */,
+			);
+			name = Pathfinding;
+			sourceTree = "<group>";
+		};
 		F0D706CB14A5652500EC7633 /* Scenes and Layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -3105,6 +3131,8 @@
 				F02646E014A59E0500C96B85 /* Gameplay_Layer.mm in Sources */,
 				F07E8E1214AA92E900A7F29D /* shortestPathStep.m in Sources */,
 				F07E8E1A14AD275300A7F29D /* bullet.mm in Sources */,
+				F058107614C7DFFC00B0B4E4 /* StarNode.mm in Sources */,
+				F058107914C88A8000B0B4E4 /* StarNodePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

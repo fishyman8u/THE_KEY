@@ -70,13 +70,14 @@
     CCAnimation *wounded;
     
     //message vars
-    CCArray *path; //used for recieving paths after a pathfinding request
+    NSMutableArray *path; //used for recieving paths after a pathfinding request
     float targeting_rotation; //used for recieving a target angle from a targeting request
     BOOL pathLoops; //used for determining where the path is a looping path (for a patrol)
     BOOL fireIfAble;
     BOOL move;
     BOOL enemySpotted;
     CGPoint currentDestination;
+    NSMutableArray *enemies_sighted;
     
     //physics variables
    // b2Vec2 *velocity;
@@ -89,6 +90,9 @@
     
     BOOL prone_but;
     BOOL crouch_but;
+    
+    //Sight distance
+  //  float sight_distance;
 }
 @property(nonatomic, retain) CCAnimation *standing;
 @property(nonatomic, retain) CCAnimation *Standing_to_crouching;
@@ -134,4 +138,5 @@
 @property(nonatomic, readwrite) ccTime timeSinceLastShot;
 @property(nonatomic, readwrite) BOOL firing;
 @property(nonatomic, readwrite) BOOL fireIfAble;
+@property(nonatomic, readwrite) NSMutableArray *enemies_sighted;
 @end

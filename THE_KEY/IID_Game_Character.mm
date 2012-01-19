@@ -27,6 +27,7 @@
 @synthesize spClosedSteps;
 @synthesize delegate;
 @synthesize team;
+@synthesize sightDistance;
 -(id) init
 {
     
@@ -42,6 +43,8 @@
         self.isPlayerControlled = FALSE;
         self.spOpenSteps = nil;
         self.spClosedSteps = nil;
+        sightDistance = 100.0f;
+        
     }
     return self;
 }
