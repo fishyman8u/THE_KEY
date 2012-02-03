@@ -27,7 +27,7 @@
 @synthesize spClosedSteps;
 @synthesize delegate;
 @synthesize team;
-@synthesize sightDistance;
+@synthesize sightDistance, opacity;
 -(id) init
 {
     

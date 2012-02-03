@@ -167,7 +167,7 @@
             //[player setTag:kAFC_Player_TagValue];
             
             //set weapons, ammo, etc
-            
+           
             [player setDelegate:self];
             [player setTeam:team];
             [sceneSpriteBatchNode addChild:player z:kAFC_Player_Z_Value tag:kAFC_Player_TagValue];
@@ -247,8 +247,10 @@
                     CCLOG(@"AFC Player created at x: %f and y: %f", location.x, location.y);
                     AFC * player = (AFC*)[sceneSpriteBatchNode getChildByTag:kAFC_Player_TagValue];
                     [player setIsPlayerControlled:YES];
+                    
                     //player.rotation = 90.0f;
                     [player setRotation:90.0f];
+                  
                     Player_Exists = TRUE;
                     //CCLOG(@"testing");
                 }

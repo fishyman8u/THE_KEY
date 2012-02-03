@@ -369,6 +369,8 @@
 		F03988DD14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F03988DB14A5A0D000DA9C8F /* Joystick_Cross_Hairs-01.png */; };
 		F058107614C7DFFC00B0B4E4 /* StarNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = F058107514C7DFFC00B0B4E4 /* StarNode.mm */; };
 		F058107914C88A8000B0B4E4 /* StarNodePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = F058107814C88A8000B0B4E4 /* StarNodePath.mm */; };
+		F058107F14D61B7400B0B4E4 /* Control_Layer_3D.m in Sources */ = {isa = PBXBuildFile; fileRef = F058107E14D61B7400B0B4E4 /* Control_Layer_3D.m */; };
+		F058108214D61BE200B0B4E4 /* Generic_Space_World.m in Sources */ = {isa = PBXBuildFile; fileRef = F058108114D61BE200B0B4E4 /* Generic_Space_World.m */; };
 		F07E8E1214AA92E900A7F29D /* shortestPathStep.m in Sources */ = {isa = PBXBuildFile; fileRef = F07E8E1114AA92E900A7F29D /* shortestPathStep.m */; };
 		F07E8E1A14AD275300A7F29D /* bullet.mm in Sources */ = {isa = PBXBuildFile; fileRef = F07E8E1914AD275300A7F29D /* bullet.mm */; };
 		F07E8E1D14AD2D6800A7F29D /* bullet.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07E8E1C14AD2D6800A7F29D /* bullet.plist */; };
@@ -1202,6 +1204,10 @@
 		F058107514C7DFFC00B0B4E4 /* StarNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StarNode.mm; sourceTree = "<group>"; };
 		F058107714C88A8000B0B4E4 /* StarNodePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarNodePath.h; sourceTree = "<group>"; };
 		F058107814C88A8000B0B4E4 /* StarNodePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StarNodePath.mm; sourceTree = "<group>"; };
+		F058107D14D61B7400B0B4E4 /* Control_Layer_3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Control_Layer_3D.h; sourceTree = "<group>"; };
+		F058107E14D61B7400B0B4E4 /* Control_Layer_3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Control_Layer_3D.m; sourceTree = "<group>"; };
+		F058108014D61BE200B0B4E4 /* Generic_Space_World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generic_Space_World.h; sourceTree = "<group>"; };
+		F058108114D61BE200B0B4E4 /* Generic_Space_World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generic_Space_World.m; sourceTree = "<group>"; };
 		F07E8E1014AA92E900A7F29D /* shortestPathStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortestPathStep.h; sourceTree = "<group>"; };
 		F07E8E1114AA92E900A7F29D /* shortestPathStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shortestPathStep.m; sourceTree = "<group>"; };
 		F07E8E1814AD275200A7F29D /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bullet.h; sourceTree = "<group>"; };
@@ -2558,6 +2564,10 @@
 		F0D706CE14A5654900EC7633 /* 3d Levels */ = {
 			isa = PBXGroup;
 			children = (
+				F058107D14D61B7400B0B4E4 /* Control_Layer_3D.h */,
+				F058107E14D61B7400B0B4E4 /* Control_Layer_3D.m */,
+				F058108014D61BE200B0B4E4 /* Generic_Space_World.h */,
+				F058108114D61BE200B0B4E4 /* Generic_Space_World.m */,
 			);
 			name = "3d Levels";
 			sourceTree = "<group>";
@@ -3133,6 +3143,8 @@
 				F07E8E1A14AD275300A7F29D /* bullet.mm in Sources */,
 				F058107614C7DFFC00B0B4E4 /* StarNode.mm in Sources */,
 				F058107914C88A8000B0B4E4 /* StarNodePath.mm in Sources */,
+				F058107F14D61B7400B0B4E4 /* Control_Layer_3D.m in Sources */,
+				F058108214D61BE200B0B4E4 /* Generic_Space_World.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

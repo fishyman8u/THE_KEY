@@ -64,5 +64,6 @@
 @property(nonatomic, assign) id <GameplayLayerDelegate> delegate;
 @property(nonatomic) int team;
 @property(nonatomic) float sightDistance;
+@property(readwrite,nonatomic) GLubyte opacity;
 -(void)moveToward:(CGPoint)target;
 @end

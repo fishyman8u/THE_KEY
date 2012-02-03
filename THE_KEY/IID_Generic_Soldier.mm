@@ -741,7 +741,7 @@ bool isBodyCollidingWithObjectType(b2Body *body, GameObjectType objectType)
         timeSinceLastShot = 0.0f;
         left_overtime = 0.0f;
         button_lock = 0.0f;
-        enemies_sighted = [[CCArray alloc] initWithCapacity:20];
+        enemies_sighted = [[NSMutableArray alloc] initWithCapacity:20];
       //  sight_distance = 100.0f;
         //need to set default values
         //need to create dealloc method to cleanup
